@@ -58,11 +58,11 @@ function HelpCenter(props) {
                                                     >
                                                         <stop
                                                             offset="0.164688"
-                                                            stopColor="#DEC7FF"
+                                                            stopColor="#c7d2ff"
                                                         />
                                                         <stop
                                                             offset="0.855177"
-                                                            stopColor="#5C27FE"
+                                                            stopColor="#4628ff"
                                                         />
                                                     </linearGradient>
                                                 </defs>

@@ -1,8 +1,9 @@
-@use '../abstracts/' as *;
+@use '../abstracts/'as *;
 
 .about {
     padding: 0 0 100px;
     position: relative;
+
     .block-text {
         @include desktop-1200 {
             padding: 80px 0;
@@ -22,6 +23,7 @@
                 z-index: 3;
                 position: relative;
             }
+
             .img2,
             .img3,
             .img4,
@@ -38,6 +40,7 @@
                 left: -183px;
                 animation: animate-2 15s linear 0s infinite;
             }
+
             .img3 {
                 width: 222px;
                 height: 222px;
@@ -46,6 +49,7 @@
                 left: -108px;
                 animation: animate-3 15s linear 0s infinite;
             }
+
             .img4 {
                 width: 65px;
                 height: 62px;
@@ -54,6 +58,7 @@
                 left: 129px;
                 animation: animate-4 15s linear 0s infinite;
             }
+
             .img5 {
                 width: 255px;
                 height: 246px;
@@ -81,6 +86,7 @@
                 &::after {
                     display: none;
                 }
+
                 .img1 {
                     width: 100%;
                 }
@@ -133,6 +139,7 @@
         @include mobile {
             padding: 0 0 80px;
         }
+
         .about__main {
             img {
                 margin-bottom: 30px;
@@ -142,9 +149,11 @@
                 }
             }
         }
+
         .block-text .heading {
             margin-bottom: 38px;
         }
+
         .action-btn span {
             padding: 15px 24px;
         }
@@ -178,8 +187,10 @@
         .card-box.sm {
             width: 236px;
             padding: 15px 14px 15px 10px;
+
             .top {
                 margin-bottom: 10px;
+
                 h6 {
                     font-size: 8px;
 
@@ -187,11 +198,13 @@
                         font-size: 12px;
                     }
                 }
+
                 span {
                     font-size: 25px;
                     margin-right: 3px;
                 }
             }
+
             .content {
                 .image {
                     height: 208px;
@@ -208,6 +221,7 @@
                     h6 {
                         font-size: 9px;
                     }
+
                     p {
                         font-size: 8px;
                     }
@@ -218,6 +232,7 @@
                 margin: 0 auto;
             }
         }
+
         .card-box:last-child {
             transform: translateX(-150px) translateY(-194px) rotate(-13deg);
             z-index: 1;
@@ -237,6 +252,7 @@
 .speciality {
     padding: 100px 0 75px;
     position: relative;
+
     .container {
         max-width: 1140px;
     }
@@ -276,7 +292,7 @@
     border-radius: 15px;
 
     .icon {
-        background: linear-gradient(289.89deg, #dec7ff -23.71%, #5c27fe 96.09%);
+        background: linear-gradient(289.89deg, #c7d2ff -23.71%, #4628ff 96.09%);
         backdrop-filter: blur(4px);
         width: 105px;
         height: 105px;
@@ -290,9 +306,11 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     .title {
         margin-bottom: 11px;
     }
+
     p {
         margin-bottom: 14px;
     }
@@ -306,6 +324,7 @@
         .icon {
             transform: translate(-50%, -50%) rotateY(-360deg);
         }
+
         .number {
             color: rgba(255, 255, 255, 1);
         }
@@ -314,9 +333,11 @@
 
 .portfolio {
     position: relative;
+
     .container {
         max-width: 1140px;
     }
+
     .block-text .heading {
         margin-bottom: 38px;
     }
@@ -327,6 +348,7 @@
 
             @include mobile {
                 width: 100%;
+
                 img {
                     width: 100%;
                 }
@@ -334,6 +356,7 @@
         }
     }
 }
+
 .portfolio-box {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 73.86%);
     backdrop-filter: blur(4px);
@@ -344,19 +367,17 @@
     margin-bottom: 19px;
 
     .step {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
         backdrop-filter: blur(4px);
         border-radius: 100px;
         position: absolute;
         top: -15px;
         left: 22px;
         padding: 6px 16px;
-        background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%), #ffffff;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -388,18 +409,22 @@
     .shape {
         top: 0;
     }
+
     .container {
         max-width: 1322px;
     }
 
     &.s2 {
         padding: 97px 0 32px;
+
         .shape {
             top: -70%;
         }
+
         .block-text .heading {
             margin-bottom: 39px;
         }
+
         .container {
             max-width: 1780px;
 
@@ -420,19 +445,24 @@
         @include tablet {
             padding: 80px 0;
         }
+
         .project-swiper {
             margin-top: 37px;
             max-width: 540px;
+
             .swiper-button-next {
                 right: 17%;
             }
+
             .swiper-button-prev {
                 left: 17%;
             }
+
             .swiper-slide {
                 .project-box .image {
                     height: 500px;
                 }
+
                 &.swiper-slide-active {
                     .project-box .image {
                         height: 500px;
@@ -442,6 +472,7 @@
         }
     }
 }
+
 .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
@@ -454,6 +485,7 @@
         background: transparent;
     }
 }
+
 .project-swiper,
 .project-swiper-3 {
     margin-top: 40px;
@@ -501,6 +533,7 @@
         right: 36%;
         z-index: 99;
     }
+
     .swiper-button-prev {
         left: 36%;
         z-index: 99;
@@ -509,6 +542,7 @@
 }
 
 .banner.s2 {
+
     .swiper-button-next,
     .swiper-button-prev {
         width: 60px;
@@ -519,6 +553,7 @@
         top: auto;
 
         @include flex(center, center);
+
         &::after {
             display: none;
         }
@@ -534,19 +569,24 @@
 
     .swiper-button-next {
         right: 10%;
+
         @include desktop-1600 {
             right: 5%;
         }
+
         @include desktop-1400 {
             display: none;
         }
     }
+
     .swiper-button-prev {
         left: 10%;
         background: #703ffe;
+
         @include desktop-1600 {
             left: 5%;
         }
+
         @include desktop-1400 {
             display: none;
         }
@@ -554,12 +594,10 @@
 }
 
 .project-box {
-    background: linear-gradient(
-        89.96deg,
-        rgba(255, 255, 255, 0.05) 0.03%,
-        rgba(255, 255, 255, 0.008) 49.67%,
-        rgba(255, 255, 255, 0.05) 99.96%
-    );
+    background: linear-gradient(89.96deg,
+            rgba(255, 255, 255, 0.05) 0.03%,
+            rgba(255, 255, 255, 0.008) 49.67%,
+            rgba(255, 255, 255, 0.05) 99.96%);
     backdrop-filter: blur(4px);
     border-radius: 26px;
     padding: 20px;
@@ -571,6 +609,7 @@
         height: 375px;
         border-radius: 20px;
         overflow: hidden;
+
         a {
             width: 100%;
             height: 100%;
@@ -615,6 +654,7 @@
         left: 0;
         z-index: -2;
     }
+
     .shape {
         top: 0;
     }
@@ -625,15 +665,19 @@
 
     &.s2 {
         padding: 69px 0 47px;
+
         .shape {
             top: -60%;
         }
+
         @include tablet {
             padding: 30px 0 47px;
         }
+
         .container {
             max-width: 1590px;
         }
+
         .block-text .heading {
             margin-bottom: 47px;
         }
@@ -649,6 +693,7 @@
         .title {
             padding-bottom: 11px;
             margin-bottom: 19px;
+
             &::after {
                 height: 1px;
             }
@@ -673,7 +718,7 @@
             left: 46%;
             width: 19px;
             height: 19px;
-            background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%), #ffffff;
+            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%), #ffffff;
             border: 4px solid #1f223e;
             border-radius: 50%;
         }
@@ -706,7 +751,7 @@
         width: 11px;
         height: 11px;
         border-radius: 50%;
-        background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%), #ffffff;
 
         &.bottom {
             top: auto;
@@ -736,6 +781,7 @@
         height: 1px;
         width: 100%;
     }
+
     .roadmap-swiper {
         padding-top: 20px;
     }
@@ -747,6 +793,7 @@
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.1);
         top: 111px;
+
         &::after {
             display: none;
         }
@@ -755,9 +802,11 @@
             background: #703ffe;
         }
     }
+
     .swiper-button-prev {
         left: -95px;
     }
+
     .swiper-button-next {
         right: -95px;
     }
@@ -771,9 +820,11 @@
         border: none;
     }
 }
+
 .button {
     text-align: center;
     margin-top: 38px;
+
     a {
         span {
             padding: 14px 24px;
@@ -811,7 +862,7 @@
         right: -37px;
         width: 11px;
         height: 11px;
-        background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%), #ffffff;
 
         border-radius: 50%;
         animation: 2s pulse-anim infinite;
@@ -819,8 +870,9 @@
 
     @keyframes pulse-anim {
         0% {
-            box-shadow: #dec7ff 0 0 0 0;
+            box-shadow: #c7d2ff 0 0 0 0;
         }
+
         100% {
             box-shadow: #1f223e 0 0 0 8px;
         }
@@ -843,19 +895,17 @@
     }
 
     .time {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
         backdrop-filter: blur(4px);
         border-radius: 100px;
         position: absolute;
         top: -15px;
         left: 29px;
         padding: 6px 16px;
-        background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%), #ffffff;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -876,7 +926,7 @@
             width: 60px;
             height: 4px;
 
-            background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%);
+            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
             border-radius: 1.2px;
             position: absolute;
             bottom: 0;
@@ -897,6 +947,7 @@
                 left: auto;
                 right: -28px;
             }
+
             &::after {
                 left: auto;
                 right: -40px;
@@ -904,6 +955,7 @@
         }
     }
 }
+
 .team {
     position: relative;
     padding: 30px 0 105px;
@@ -918,18 +970,21 @@
 
     &.s2 {
         padding: 30px 0 69px;
+
         .img-line {
             position: absolute;
             z-index: -2;
             top: -85%;
             left: 0;
         }
+
         .block-text .heading {
             margin-bottom: 38px;
         }
 
         .team-box {
             margin-bottom: 30px;
+
             .image {
                 .list-social {
                     position: absolute;
@@ -941,6 +996,7 @@
                     opacity: 0;
                     transition: all 0.5s ease-in-out;
                     z-index: 9;
+
                     li {
                         a {
                             background: #fff;
@@ -952,7 +1008,8 @@
                             }
 
                             &:hover {
-                                background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%);
+                                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
+
                                 span::before {
                                     color: #fff;
                                 }
@@ -984,14 +1041,13 @@
 .home-3 .team.s2 {
     padding-bottom: 0;
 }
+
 .team-box {
     .image {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
         backdrop-filter: blur(4px);
         padding: 12px;
         position: relative;
@@ -1000,14 +1056,13 @@
         height: 255px;
         border-radius: 20px;
         overflow: hidden;
+
         &::after {
-            background: linear-gradient(
-                90deg,
-                rgba(255, 255, 255, 0.13) 0px,
-                rgba(255, 255, 255, 0.13) 77%,
-                rgba(255, 255, 255, 0.5) 92%,
-                rgba(255, 255, 255, 0)
-            );
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.13) 0px,
+                    rgba(255, 255, 255, 0.13) 77%,
+                    rgba(255, 255, 255, 0.5) 92%,
+                    rgba(255, 255, 255, 0));
             content: '';
             height: 200%;
             left: -210%;
@@ -1021,6 +1076,7 @@
         a {
             width: 100%;
             height: 100%;
+
             img {
                 width: 100%;
                 height: 100%;
@@ -1058,11 +1114,14 @@
         }
     }
 }
+
 .list-social {
     @include flex(center, center);
     margin-top: 32px;
+
     li {
         margin: 0 5px;
+
         a {
             min-width: 38px;
             width: 38px;
@@ -1073,7 +1132,7 @@
             @include flex(center, center);
 
             &:hover {
-                background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%);
+                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
             }
         }
     }
@@ -1114,17 +1173,16 @@
 
 .testimonials {
     position: relative;
+
     .container {
         max-width: 1782px;
     }
 
     .testimonials__main {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
         backdrop-filter: blur(2px);
         border-radius: 26px;
 
@@ -1149,6 +1207,7 @@
         @include tablet {
             padding: 0 0 80px;
         }
+
         .testimonials__main {
             padding: 68px 0;
         }
@@ -1167,13 +1226,16 @@
     img {
         margin-bottom: 25px;
     }
+
     .text {
         font-weight: 300;
         font-size: 26px;
     }
+
     .info {
         text-align: center;
         margin-top: 30px;
+
         img {
             width: 90px;
             height: 90px;
@@ -1182,10 +1244,12 @@
             border-radius: 50%;
             margin-bottom: 22px;
         }
+
         .name {
             font-size: 18px;
             margin-bottom: 6px;
         }
+
         p {
             font-weight: 300;
             font-size: 14px;
@@ -1205,6 +1269,7 @@
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 51.68%);
             padding: 40px 20px 0;
             border-radius: 20px;
+
             .image {
                 width: 116px;
                 height: 116px;
@@ -1265,6 +1330,7 @@
             margin-bottom: 30px;
             padding-bottom: 0;
             border: none;
+
             li {
                 margin-bottom: 10px;
                 margin-left: 0;
@@ -1278,6 +1344,7 @@
 
         .image {
             animation: animate-3 5s linear 0s infinite;
+
             img {
                 @include tablet {
                     width: 100%;
@@ -1291,6 +1358,7 @@
     margin: 0 auto;
     margin-top: 39px;
     max-width: 1116px;
+
     ul {
         @include flex(center, center);
 
@@ -1314,7 +1382,7 @@
             cursor: pointer;
 
             &.react-tabs__tab--selected {
-                background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%), rgba(255, 255, 255, 0.1);
+                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%), rgba(255, 255, 255, 0.1);
             }
 
             @include mobile {
@@ -1323,16 +1391,17 @@
         }
     }
 }
+
 .flat-accordion {
     .accordion-item {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
         margin-bottom: 12px;
+        padding: 10px;
     }
+
     .accordion-button {
         background: transparent;
         color: #fff;
@@ -1344,15 +1413,21 @@
             background-image: none;
             position: absolute;
             right: 16px;
-            top: 16px;
+            top: 0;
             margin-right: 0;
             font-family: 'icomoon' !important;
             content: '\e900';
+            // content: "\e936";
             color: #fff;
         }
     }
+
     .accordion-body {
         padding: 0 20px 20px;
+
+        .toggle-content {
+            padding: 10px 0 0 0;
+        }
     }
 }
 
@@ -1369,7 +1444,7 @@
 }
 
 .create__main {
-    background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%);
+    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
     border-radius: 26px;
     position: relative;
 
@@ -1389,13 +1464,16 @@
         position: relative;
         z-index: 1;
         padding: 32px 30px 29px;
+
         h4 {
             font-size: 30px;
             text-transform: none;
             margin-bottom: 13px;
         }
+
         .action-btn {
             margin-top: 30px;
+
             span {
                 padding: 15px 44px;
                 background: linear-gradient(265.05deg, #ffcb52 -6.15%, #ff7b02 106.32%);
@@ -1419,7 +1497,7 @@
 }
 
 .couter__main {
-    background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%);
+    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
     border-radius: 26px;
     padding: 37px 43px;
     position: relative;
@@ -1458,6 +1536,7 @@
         height: 80px;
         background: rgba(255, 255, 255, 0.15);
     }
+
     .icon {
         width: 66px;
         height: 66px;
@@ -1474,6 +1553,7 @@
 
     &:last-child {
         margin: 0;
+
         &:after {
             display: none;
         }
@@ -1497,6 +1577,7 @@
     @include mobile {
         padding: 0 0 60px;
     }
+
     .block-text .heading {
         margin-bottom: 39px;
     }
@@ -1512,12 +1593,10 @@
     }
 
     .image {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
         backdrop-filter: blur(4px);
         padding: 14px;
         position: relative;
@@ -1528,13 +1607,11 @@
         overflow: hidden;
 
         &::after {
-            background: linear-gradient(
-                90deg,
-                rgba(255, 255, 255, 0.13) 0px,
-                rgba(255, 255, 255, 0.13) 77%,
-                rgba(255, 255, 255, 0.5) 92%,
-                rgba(255, 255, 255, 0)
-            );
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.13) 0px,
+                    rgba(255, 255, 255, 0.13) 77%,
+                    rgba(255, 255, 255, 0.5) 92%,
+                    rgba(255, 255, 255, 0));
             content: '';
             height: 200%;
             left: -210%;
@@ -1548,6 +1625,7 @@
         a {
             width: 100%;
             height: 100%;
+
             img {
                 width: 100%;
                 height: 100%;
@@ -1562,6 +1640,7 @@
 
         .meta {
             margin-bottom: 8px;
+
             p {
                 @include flex(center, center);
 
@@ -1598,7 +1677,7 @@
 
     .token__main {
         margin-top: 68px;
-        background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%);
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
         border-radius: 16px;
         padding: 31px;
     }
@@ -1626,6 +1705,7 @@
                 margin-right: 14px;
             }
         }
+
         h6 {
             font-size: 14px;
             text-transform: uppercase;
@@ -1641,6 +1721,7 @@
             padding: 60px 0 0;
         }
     }
+
     .portfolio {
         padding: 97px 0 41px;
     }
@@ -1657,10 +1738,12 @@
 .page-roadmap {
     .roadmap {
         padding: 106px 0 0;
+
         @include mobile {
             padding: 60px 0 0;
         }
     }
+
     .project.s2 {
         padding: 53px 0 49px;
     }
@@ -1703,7 +1786,7 @@
                 top: auto;
                 bottom: 0;
 
-                background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%);
+                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
                 border-radius: 1.2px;
             }
         }
@@ -1719,6 +1802,7 @@
                 svg {
                     margin-right: 8px;
                 }
+
                 p {
                     font-weight: 300;
                     font-size: 16px;
@@ -1733,9 +1817,11 @@
 
     @include tablet {
         flex-wrap: wrap;
+
         .info {
             width: 100%;
         }
+
         .form-box {
             width: 100%;
             padding: 60px 15px;
@@ -1767,12 +1853,10 @@
     input.form-control,
     select,
     textarea {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
         backdrop-filter: blur(2px);
 
         border-radius: 6px;
@@ -1799,6 +1883,7 @@
         border-color: rgba(255, 255, 255, 0.1);
         outline: none;
         height: 160px;
+
         &:focus-visible {
             border-color: var(--primary-color);
         }
@@ -1835,6 +1920,7 @@ section.touch {
         padding: 94px 0 48px;
     }
 }
+
 .nft {
     .shape {
         top: 0;
@@ -1846,10 +1932,12 @@ section.touch {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+
     .widget-search {
         position: relative;
         width: 350px;
         margin-bottom: 10px;
+
         input {
             padding: 16px 13px;
 
@@ -1863,6 +1951,7 @@ section.touch {
             border: none;
             width: 100%;
         }
+
         .btn-search {
             position: absolute;
             right: 15px;
@@ -1906,6 +1995,7 @@ section.touch {
             //     transform: translateY(-50%);
             // }
         }
+
         ul {
             position: absolute;
             width: 100%;
@@ -1984,6 +2074,7 @@ section.touch {
 
     .card-title {
         margin-bottom: 18px;
+
         a {
             font-size: 18px;
         }
@@ -2020,6 +2111,7 @@ section.touch {
                     color: rgba(255, 255, 255, 0.3);
                     display: block;
                 }
+
                 a {
                     font-weight: 600;
                     font-size: 14px;
@@ -2048,6 +2140,7 @@ section.touch {
         justify-content: space-between;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         padding-top: 16px;
+
         .price {
             display: flex;
             align-items: center;
@@ -2063,6 +2156,7 @@ section.touch {
                     font-size: 12px;
                     color: rgba(255, 255, 255, 0.3);
                 }
+
                 h6 {
                     font-size: 14px;
                 }
@@ -2070,7 +2164,7 @@ section.touch {
         }
 
         .sc-button {
-            background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%);
+            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
             border-radius: 8px;
             padding: 8px 20px;
             color: #fff;
@@ -2078,13 +2172,11 @@ section.touch {
             overflow: hidden;
 
             &::after {
-                background: linear-gradient(
-                    90deg,
-                    rgba(255, 255, 255, 0.13) 0px,
-                    rgba(255, 255, 255, 0.13) 77%,
-                    rgba(255, 255, 255, 0.5) 92%,
-                    rgba(255, 255, 255, 0)
-                );
+                background: linear-gradient(90deg,
+                        rgba(255, 255, 255, 0.13) 0px,
+                        rgba(255, 255, 255, 0.13) 77%,
+                        rgba(255, 255, 255, 0.5) 92%,
+                        rgba(255, 255, 255, 0));
                 content: '';
                 height: 200%;
                 left: -210%;
@@ -2108,6 +2200,7 @@ section.touch {
 
     &:hover {
         transform: translateY(-10px);
+
         .card-media {
             a {
                 img {
@@ -2122,6 +2215,7 @@ section.touch {
     position: relative;
     width: 100%;
     margin-bottom: 10px;
+
     input {
         padding: 16px 13px;
 
@@ -2139,6 +2233,7 @@ section.touch {
             color: #fff;
         }
     }
+
     .btn-search {
         position: absolute;
         right: 15px;
@@ -2146,6 +2241,7 @@ section.touch {
         transform: translateY(-50%);
     }
 }
+
 .bloglist {
     padding: 106px 0;
 
@@ -2153,6 +2249,7 @@ section.touch {
         padding: 60px 0;
     }
 }
+
 .bloglist__main {
     display: flex;
 
@@ -2172,6 +2269,7 @@ section.touch {
 
         .widget-sidebar {
             margin-bottom: 34px;
+
             .heading {
                 font-size: 18px;
                 position: relative;
@@ -2186,13 +2284,14 @@ section.touch {
                     width: 60px;
                     height: 1px;
 
-                    background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%);
+                    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
                     border-radius: 1.2px;
                 }
             }
 
             ul {
                 padding-left: 16px;
+
                 li {
                     list-style: disc;
                     margin-bottom: 10px;
@@ -2216,6 +2315,7 @@ section.touch {
             &.recent {
                 ul {
                     padding: 0;
+
                     li {
                         display: flex;
                         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -2227,6 +2327,7 @@ section.touch {
                             padding-bottom: 0;
                             border: none;
                         }
+
                         .image {
                             width: 76px;
                             height: 76px;
@@ -2250,8 +2351,10 @@ section.touch {
                         .content {
                             .meta {
                                 margin-bottom: 10px;
+
                                 a {
                                     @include flex(center, flex-start);
+
                                     svg {
                                         margin-right: 5px;
                                     }
@@ -2267,7 +2370,8 @@ section.touch {
                                 overflow: hidden;
                                 text-overflow: ellipsis;
                                 display: -webkit-box;
-                                -webkit-line-clamp: 2; /* number of lines to show */
+                                -webkit-line-clamp: 2;
+                                /* number of lines to show */
                                 line-clamp: 2;
                                 -webkit-box-orient: vertical;
                             }
@@ -2297,7 +2401,7 @@ section.touch {
                             font-size: 14px;
 
                             &:hover {
-                                background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%);
+                                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
                                 color: #fff;
                             }
                         }
@@ -2309,10 +2413,12 @@ section.touch {
 
     @include desktop-1200 {
         flex-wrap: wrap;
+
         .list {
             width: 100%;
             padding-right: 0;
         }
+
         .sidebar {
             width: 100%;
             margin-top: 60px;
@@ -2329,12 +2435,10 @@ section.touch {
     margin-bottom: 30px;
 
     .image {
-        background: linear-gradient(
-            89.95deg,
-            rgba(255, 255, 255, 0.05) -2.98%,
-            rgba(255, 255, 255, 0.008) 49.65%,
-            rgba(255, 255, 255, 0.05) 102.98%
-        );
+        background: linear-gradient(89.95deg,
+                rgba(255, 255, 255, 0.05) -2.98%,
+                rgba(255, 255, 255, 0.008) 49.65%,
+                rgba(255, 255, 255, 0.05) 102.98%);
         backdrop-filter: blur(2px);
         border-radius: 26px;
 
@@ -2349,6 +2453,7 @@ section.touch {
             height: 100%;
             overflow: hidden;
             border-radius: 26px;
+
             img {
                 width: 100%;
                 height: 100%;
@@ -2365,6 +2470,7 @@ section.touch {
 
         .meta {
             margin-bottom: 8px;
+
             a {
                 @include flex(center, flex-start);
                 color: #fff;
@@ -2388,6 +2494,7 @@ section.touch {
         .image {
             width: 100%;
         }
+
         .content {
             width: 100%;
             padding-top: 30px;
@@ -2430,6 +2537,7 @@ section.touch {
 .page-advisor {
     .team.s2 {
         padding: 107px 0 69px;
+
         @include mobile {
             padding: 70px 0 30px;
         }
@@ -2442,6 +2550,7 @@ section.touch {
     .partner {
         padding: 3px 0 11px;
     }
+
     .faq {
         padding: 96px 0 89px;
     }
@@ -2467,7 +2576,7 @@ section.touch {
                 color: #fff;
 
                 &:hover {
-                    background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%);
+                    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
                 }
             }
         }
@@ -2493,12 +2602,10 @@ section.touch {
     }
 
     .action-btn {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
 
         span {
             padding: 15px 52px;
@@ -2510,6 +2617,7 @@ section.touch {
     .title {
         margin-bottom: 17px;
     }
+
     p svg {
         margin-right: 7px;
     }
@@ -2556,12 +2664,14 @@ section.touch {
                 object-fit: cover;
                 margin-bottom: 14px;
             }
+
             p {
                 font-size: 12px;
                 font-weight: 400;
                 color: rgba(255, 255, 255, 0.5);
             }
         }
+
         p {
             font-weight: 300;
             font-size: 16px;
@@ -2579,6 +2689,7 @@ section.touch {
 
             .list-tag {
                 display: flex;
+
                 li {
                     margin-right: 4px;
 
@@ -2593,7 +2704,7 @@ section.touch {
                         font-size: 12px;
 
                         &:hover {
-                            background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%);
+                            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
                         }
                     }
                 }
@@ -2604,10 +2715,12 @@ section.touch {
 
 .bottom {
     margin-top: 40px;
+
     .recent {
         display: flex;
         justify-content: space-between;
         margin: 0 -10px;
+
         .ac {
             display: flex;
             align-items: center;
@@ -2641,10 +2754,12 @@ section.touch {
                 flex-direction: row-reverse;
                 padding: 15px 14px 15px 10px;
                 background: url('../../assets/images/background/recent-2.png') no-repeat;
+
                 svg {
                     margin-right: 0;
                     margin-left: 22px;
                 }
+
                 .meta {
                     a {
                         svg {
@@ -2653,15 +2768,19 @@ section.touch {
                     }
                 }
             }
+
             div {
                 position: relative;
                 z-index: 1;
+
                 .meta {
                     margin-bottom: 6px;
+
                     a {
                         font-family: 'Readex Pro';
                         font-weight: 300;
                         font-size: 14px;
+
                         svg {
                             margin-right: 5px;
                         }
@@ -2678,6 +2797,7 @@ section.touch {
 
     .comment {
         margin-top: 44px;
+
         h5 {
             margin-bottom: 26px;
         }
@@ -2695,6 +2815,7 @@ section.touch {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 20px;
     margin-top: 19px;
+
     &.s1 {
         border: none;
         padding: 0;
@@ -2704,6 +2825,7 @@ section.touch {
     &.rep {
         margin-left: 65px;
     }
+
     .avt {
         width: 50px;
         height: 50px;
@@ -2711,6 +2833,7 @@ section.touch {
         border-radius: 50%;
         overflow: hidden;
         margin-right: 14px;
+
         img {
             width: 100%;
             height: 100%;
@@ -2718,10 +2841,12 @@ section.touch {
             object-fit: cover;
         }
     }
+
     .info {
         .name {
             margin-bottom: 5px;
         }
+
         .meta {
             margin-bottom: 13px;
         }
@@ -2729,6 +2854,7 @@ section.touch {
         .text {
             margin-bottom: 13px;
         }
+
         a {
             font-family: 'Readex Pro';
             font-weight: 700;
@@ -2763,12 +2889,14 @@ section.touch {
                 padding: 0;
             }
         }
+
         .about__right {
             margin-left: 117px;
 
             @include mobile {
                 margin-left: 0;
             }
+
             .images {
                 &::after {
                     right: 8px;
@@ -2831,17 +2959,17 @@ section.touch {
         }
     }
 }
+
 .watch-video {
     padding: 0 0 100px;
     position: relative;
 }
+
 .watch-video__main {
-    background: linear-gradient(
-        89.96deg,
-        rgba(255, 255, 255, 0.05) 0.03%,
-        rgba(255, 255, 255, 0.008) 49.67%,
-        rgba(255, 255, 255, 0.05) 99.96%
-    );
+    background: linear-gradient(89.96deg,
+            rgba(255, 255, 255, 0.05) 0.03%,
+            rgba(255, 255, 255, 0.008) 49.67%,
+            rgba(255, 255, 255, 0.05) 99.96%);
     backdrop-filter: blur(2px);
 
     border-radius: 26px;
@@ -2869,6 +2997,7 @@ section.touch {
 
 .wrap-video {
     margin-bottom: 27px;
+
     a {
         margin: 0 auto;
         width: 60px;
@@ -2882,6 +3011,7 @@ section.touch {
             0% {
                 box-shadow: rgba(255, 255, 255, 0.4) 0 0 0 0;
             }
+
             100% {
                 box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 10px;
             }
@@ -2891,14 +3021,18 @@ section.touch {
 
 .assets {
     position: relative;
+
     .shape {
         top: -130%;
     }
+
     .container {
         max-width: 1750px;
     }
+
     .block-text {
         padding: 0 400px;
+
         @include desktop-1200 {
             padding: 0;
         }
@@ -2924,9 +3058,11 @@ section.touch {
 
 .participants {
     padding: 107px 0 99px;
+
     @include tablet {
         padding: 60px 0;
     }
+
     .block-text .heading {
         margin-bottom: 40px;
     }
@@ -2962,6 +3098,7 @@ section.touch {
     display: -webkit-flex;
     flex-direction: column;
 }
+
 .popup .modal-content input {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -2969,16 +3106,20 @@ section.touch {
     box-shadow: none;
     outline: none;
 }
+
 .popup .modal-content input:focus {
     border-color: var(--primary-color);
 }
+
 .popup .modal-body {
     padding: 25px;
 }
+
 .modal-body .price {
     font-weight: 500;
     font-size: 16px;
 }
+
 .modal-body .quantity {
     color: var(--primary-color2);
 }
@@ -3037,6 +3178,7 @@ section.touch {
     max-width: 500px;
     margin: 1.75rem auto;
 }
+
 .modal.fade.popup.show {
     padding-right: 0 !important;
 }

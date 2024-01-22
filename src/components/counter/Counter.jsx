@@ -53,11 +53,11 @@ function Counter(props) {
                                                 >
                                                     <stop
                                                         offset="0.164688"
-                                                        stopColor="#DEC7FF"
+                                                        stopColor="#c7d2ff"
                                                     />
                                                     <stop
                                                         offset="0.855177"
-                                                        stopColor="#5C27FE"
+                                                        stopColor="#4628ff"
                                                     />
                                                 </linearGradient>
                                                 <linearGradient
@@ -70,11 +70,11 @@ function Counter(props) {
                                                 >
                                                     <stop
                                                         offset="0.164688"
-                                                        stopColor="#DEC7FF"
+                                                        stopColor="#c7d2ff"
                                                     />
                                                     <stop
                                                         offset="0.855177"
-                                                        stopColor="#5C27FE"
+                                                        stopColor="#4628ff"
                                                     />
                                                 </linearGradient>
                                                 <linearGradient
@@ -87,11 +87,11 @@ function Counter(props) {
                                                 >
                                                     <stop
                                                         offset="0.164688"
-                                                        stopColor="#DEC7FF"
+                                                        stopColor="#c7d2ff"
                                                     />
                                                     <stop
                                                         offset="0.855177"
-                                                        stopColor="#5C27FE"
+                                                        stopColor="#4628ff"
                                                     />
                                                 </linearGradient>
                                                 <linearGradient
@@ -104,11 +104,11 @@ function Counter(props) {
                                                 >
                                                     <stop
                                                         offset="0.164688"
-                                                        stopColor="#DEC7FF"
+                                                        stopColor="#c7d2ff"
                                                     />
                                                     <stop
                                                         offset="0.855177"
-                                                        stopColor="#5C27FE"
+                                                        stopColor="#4628ff"
                                                     />
                                                 </linearGradient>
                                                 <linearGradient
@@ -121,11 +121,11 @@ function Counter(props) {
                                                 >
                                                     <stop
                                                         offset="0.164688"
-                                                        stopColor="#DEC7FF"
+                                                        stopColor="#c7d2ff"
                                                     />
                                                     <stop
                                                         offset="0.855177"
-                                                        stopColor="#5C27FE"
+                                                        stopColor="#4628ff"
                                                     />
                                                 </linearGradient>
                                                 <linearGradient
@@ -138,11 +138,11 @@ function Counter(props) {
                                                 >
                                                     <stop
                                                         offset="0.164688"
-                                                        stopColor="#DEC7FF"
+                                                        stopColor="#c7d2ff"
                                                     />
                                                     <stop
                                                         offset="0.855177"
-                                                        stopColor="#5C27FE"
+                                                        stopColor="#4628ff"
                                                     />
                                                 </linearGradient>
                                             </defs>
@@ -198,11 +198,11 @@ function Counter(props) {
                                                 >
                                                     <stop
                                                         offset="0.164688"
-                                                        stopColor="#DEC7FF"
+                                                        stopColor="#c7d2ff"
                                                     />
                                                     <stop
                                                         offset="0.855177"
-                                                        stopColor="#5C27FE"
+                                                        stopColor="#4628ff"
                                                     />
                                                 </linearGradient>
                                                 <linearGradient
@@ -215,11 +215,11 @@ function Counter(props) {
                                                 >
                                                     <stop
                                                         offset="0.164688"
-                                                        stopColor="#DEC7FF"
+                                                        stopColor="#c7d2ff"
                                                     />
                                                     <stop
                                                         offset="0.855177"
-                                                        stopColor="#5C27FE"
+                                                        stopColor="#4628ff"
                                                     />
                                                 </linearGradient>
                                                 <linearGradient
@@ -232,11 +232,11 @@ function Counter(props) {
                                                 >
                                                     <stop
                                                         offset="0.164688"
-                                                        stopColor="#DEC7FF"
+                                                        stopColor="#c7d2ff"
                                                     />
                                                     <stop
                                                         offset="0.855177"
-                                                        stopColor="#5C27FE"
+                                                        stopColor="#4628ff"
                                                     />
                                                 </linearGradient>
                                                 <clipPath id="clip0_1065_867">
@@ -290,11 +290,11 @@ function Counter(props) {
                                                 >
                                                     <stop
                                                         offset="0.164688"
-                                                        stopColor="#DEC7FF"
+                                                        stopColor="#c7d2ff"
                                                     />
                                                     <stop
                                                         offset="0.855177"
-                                                        stopColor="#5C27FE"
+                                                        stopColor="#4628ff"
                                                     />
                                                 </linearGradient>
                                                 <linearGradient
@@ -307,11 +307,11 @@ function Counter(props) {
                                                 >
                                                     <stop
                                                         offset="0.164688"
-                                                        stopColor="#DEC7FF"
+                                                        stopColor="#c7d2ff"
                                                     />
                                                     <stop
                                                         offset="0.855177"
-                                                        stopColor="#5C27FE"
+                                                        stopColor="#4628ff"
                                                     />
                                                 </linearGradient>
                                             </defs>
