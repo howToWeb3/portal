@@ -1,8 +1,8 @@
 // vite.config.js
+import fs from 'fs';
 import path from 'path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import fs from 'fs';
 
 export default defineConfig({
     plugins: [
@@ -29,17 +29,17 @@ export default defineConfig({
     },
     optimizeDeps: {
         esbuildOptions: {
-          plugins: [
-            {
-              name: "load-js-files-as-jsx",
-              setup(build) {
-                build.onLoad({ filter: /src\/.*\.js$/ }, async (args) => ({
-                  loader: "jsx",
-                  contents: await fs.readFile(args.path, "utf8"),
-                }));
-              },
-            },
-          ],
+            plugins: [
+                {
+                    name: 'load-js-files-as-jsx',
+                    setup(build) {
+                        build.onLoad({ filter: /src\/.*\.js$/ }, async args => ({
+                            loader: 'jsx',
+                            contents: await fs.readFile(args.path, 'utf8'),
+                        }));
+                    },
+                },
+            ],
         },
     },
     esbuild: {

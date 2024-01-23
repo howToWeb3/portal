@@ -4,7 +4,7 @@
   * Author: Themesflat
   * Author URI: http://www.themesflat.com
 */
-@use './abstracts/'as *;
+@use './abstracts/' as *;
 
 // @import '../bootstrap/css/bootstrap.min.css';
 
@@ -432,7 +432,7 @@ h6,
     max-width: 1650px;
 }
 
-.row>* {
+.row > * {
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -550,7 +550,6 @@ body[data-magic-cursor='hide'] .mouse-cursor {
 
 // Animation
 @keyframes animate-1 {
-
     0%,
     100% {
         transform: translateY(0vh) translateX(0vmin);
@@ -562,7 +561,6 @@ body[data-magic-cursor='hide'] .mouse-cursor {
 }
 
 @keyframes animate-2 {
-
     0%,
     100% {
         transform: translateY(0px);
@@ -574,7 +572,6 @@ body[data-magic-cursor='hide'] .mouse-cursor {
 }
 
 @keyframes animate-3 {
-
     0%,
     100% {
         transform: translateY(0vh);
@@ -586,7 +583,6 @@ body[data-magic-cursor='hide'] .mouse-cursor {
 }
 
 @keyframes animate-4 {
-
     0%,
     100% {
         transform: translateY(0vh);
@@ -598,7 +594,6 @@ body[data-magic-cursor='hide'] .mouse-cursor {
 }
 
 @keyframes animate-5 {
-
     0%,
     100% {
         transform: translateY(0vh) translateX(0vmin);
@@ -618,8 +613,7 @@ body[data-magic-cursor='hide'] .mouse-cursor {
     left: -60%;
     z-index: -1;
     background: radial-gradient(34.98% 34.98% at 50% 50%, #4628ff 0%, rgba(6, 19, 45, 0) 100%)
-        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-    ;
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     opacity: 0.5;
 
     &.right {

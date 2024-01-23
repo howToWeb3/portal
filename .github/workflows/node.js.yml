@@ -4,38 +4,39 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
+    push:
+        branches: ['main']
+    pull_request:
+        branches: ['main']
 
 jobs:
-  build:
+    build:
+        runs-on: ubuntu-latest
 
-    runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [18.x]
 
-    strategy:
-      matrix:
-        node-version: [18.x]
+        steps:
+            - uses: actions/checkout@v3
 
-    steps:
-      - uses: actions/checkout@v3
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'yarn'
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
+            - name: Install dependencies
+              run: yarn install --frozen-lockfile
 
-      - run: yarn install --frozen-lockfile
+            - name: Validate all commits
+              run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
 
-      - run: yarn build
+            - name: Perform ESLint
+              run: yarn run fix .
 
-      - name: Check Commitizen
-        run: npx commitizen --version
+            - name: Prettier Code Format
+              run: yarn prettier --write .
 
-      - name: Check Prettier
-        run: npx prettier --version
-
-      - name: Check ESLint
-        run: npx eslint --version
+            - name: Build Application Package
+              run: yarn build

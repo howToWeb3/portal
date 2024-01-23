@@ -1,4 +1,4 @@
-@use '../abstracts/'as *;
+@use '../abstracts/' as *;
 
 .about {
     padding: 0 0 100px;
@@ -367,10 +367,12 @@
     margin-bottom: 19px;
 
     .step {
-        background: linear-gradient(89.96deg,
-                rgba(255, 255, 255, 0.05) 0.03%,
-                rgba(255, 255, 255, 0.008) 49.67%,
-                rgba(255, 255, 255, 0.05) 99.96%);
+        background: linear-gradient(
+            89.96deg,
+            rgba(255, 255, 255, 0.05) 0.03%,
+            rgba(255, 255, 255, 0.008) 49.67%,
+            rgba(255, 255, 255, 0.05) 99.96%
+        );
         backdrop-filter: blur(4px);
         border-radius: 100px;
         position: absolute;
@@ -542,7 +544,6 @@
 }
 
 .banner.s2 {
-
     .swiper-button-next,
     .swiper-button-prev {
         width: 60px;
@@ -594,10 +595,12 @@
 }
 
 .project-box {
-    background: linear-gradient(89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%);
+    background: linear-gradient(
+        89.96deg,
+        rgba(255, 255, 255, 0.05) 0.03%,
+        rgba(255, 255, 255, 0.008) 49.67%,
+        rgba(255, 255, 255, 0.05) 99.96%
+    );
     backdrop-filter: blur(4px);
     border-radius: 26px;
     padding: 20px;
@@ -895,10 +898,12 @@
     }
 
     .time {
-        background: linear-gradient(89.96deg,
-                rgba(255, 255, 255, 0.05) 0.03%,
-                rgba(255, 255, 255, 0.008) 49.67%,
-                rgba(255, 255, 255, 0.05) 99.96%);
+        background: linear-gradient(
+            89.96deg,
+            rgba(255, 255, 255, 0.05) 0.03%,
+            rgba(255, 255, 255, 0.008) 49.67%,
+            rgba(255, 255, 255, 0.05) 99.96%
+        );
         backdrop-filter: blur(4px);
         border-radius: 100px;
         position: absolute;
@@ -1044,10 +1049,12 @@
 
 .team-box {
     .image {
-        background: linear-gradient(89.96deg,
-                rgba(255, 255, 255, 0.05) 0.03%,
-                rgba(255, 255, 255, 0.008) 49.67%,
-                rgba(255, 255, 255, 0.05) 99.96%);
+        background: linear-gradient(
+            89.96deg,
+            rgba(255, 255, 255, 0.05) 0.03%,
+            rgba(255, 255, 255, 0.008) 49.67%,
+            rgba(255, 255, 255, 0.05) 99.96%
+        );
         backdrop-filter: blur(4px);
         padding: 12px;
         position: relative;
@@ -1058,11 +1065,13 @@
         overflow: hidden;
 
         &::after {
-            background: linear-gradient(90deg,
-                    rgba(255, 255, 255, 0.13) 0px,
-                    rgba(255, 255, 255, 0.13) 77%,
-                    rgba(255, 255, 255, 0.5) 92%,
-                    rgba(255, 255, 255, 0));
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.13) 0px,
+                rgba(255, 255, 255, 0.13) 77%,
+                rgba(255, 255, 255, 0.5) 92%,
+                rgba(255, 255, 255, 0)
+            );
             content: '';
             height: 200%;
             left: -210%;
@@ -1179,10 +1188,12 @@
     }
 
     .testimonials__main {
-        background: linear-gradient(89.96deg,
-                rgba(255, 255, 255, 0.05) 0.03%,
-                rgba(255, 255, 255, 0.008) 49.67%,
-                rgba(255, 255, 255, 0.05) 99.96%);
+        background: linear-gradient(
+            89.96deg,
+            rgba(255, 255, 255, 0.05) 0.03%,
+            rgba(255, 255, 255, 0.008) 49.67%,
+            rgba(255, 255, 255, 0.05) 99.96%
+        );
         backdrop-filter: blur(2px);
         border-radius: 26px;
 
@@ -1394,10 +1405,12 @@
 
 .flat-accordion {
     .accordion-item {
-        background: linear-gradient(89.96deg,
-                rgba(255, 255, 255, 0.05) 0.03%,
-                rgba(255, 255, 255, 0.008) 49.67%,
-                rgba(255, 255, 255, 0.05) 99.96%);
+        background: linear-gradient(
+            89.96deg,
+            rgba(255, 255, 255, 0.05) 0.03%,
+            rgba(255, 255, 255, 0.008) 49.67%,
+            rgba(255, 255, 255, 0.05) 99.96%
+        );
         margin-bottom: 12px;
         padding: 10px;
     }
@@ -1593,10 +1606,12 @@
     }
 
     .image {
-        background: linear-gradient(89.96deg,
-                rgba(255, 255, 255, 0.05) 0.03%,
-                rgba(255, 255, 255, 0.008) 49.67%,
-                rgba(255, 255, 255, 0.05) 99.96%);
+        background: linear-gradient(
+            89.96deg,
+            rgba(255, 255, 255, 0.05) 0.03%,
+            rgba(255, 255, 255, 0.008) 49.67%,
+            rgba(255, 255, 255, 0.05) 99.96%
+        );
         backdrop-filter: blur(4px);
         padding: 14px;
         position: relative;
@@ -1607,11 +1622,13 @@
         overflow: hidden;
 
         &::after {
-            background: linear-gradient(90deg,
-                    rgba(255, 255, 255, 0.13) 0px,
-                    rgba(255, 255, 255, 0.13) 77%,
-                    rgba(255, 255, 255, 0.5) 92%,
-                    rgba(255, 255, 255, 0));
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.13) 0px,
+                rgba(255, 255, 255, 0.13) 77%,
+                rgba(255, 255, 255, 0.5) 92%,
+                rgba(255, 255, 255, 0)
+            );
             content: '';
             height: 200%;
             left: -210%;
@@ -1853,10 +1870,12 @@
     input.form-control,
     select,
     textarea {
-        background: linear-gradient(89.96deg,
-                rgba(255, 255, 255, 0.05) 0.03%,
-                rgba(255, 255, 255, 0.008) 49.67%,
-                rgba(255, 255, 255, 0.05) 99.96%);
+        background: linear-gradient(
+            89.96deg,
+            rgba(255, 255, 255, 0.05) 0.03%,
+            rgba(255, 255, 255, 0.008) 49.67%,
+            rgba(255, 255, 255, 0.05) 99.96%
+        );
         backdrop-filter: blur(2px);
 
         border-radius: 6px;
@@ -2172,11 +2191,13 @@ section.touch {
             overflow: hidden;
 
             &::after {
-                background: linear-gradient(90deg,
-                        rgba(255, 255, 255, 0.13) 0px,
-                        rgba(255, 255, 255, 0.13) 77%,
-                        rgba(255, 255, 255, 0.5) 92%,
-                        rgba(255, 255, 255, 0));
+                background: linear-gradient(
+                    90deg,
+                    rgba(255, 255, 255, 0.13) 0px,
+                    rgba(255, 255, 255, 0.13) 77%,
+                    rgba(255, 255, 255, 0.5) 92%,
+                    rgba(255, 255, 255, 0)
+                );
                 content: '';
                 height: 200%;
                 left: -210%;
@@ -2435,10 +2456,12 @@ section.touch {
     margin-bottom: 30px;
 
     .image {
-        background: linear-gradient(89.95deg,
-                rgba(255, 255, 255, 0.05) -2.98%,
-                rgba(255, 255, 255, 0.008) 49.65%,
-                rgba(255, 255, 255, 0.05) 102.98%);
+        background: linear-gradient(
+            89.95deg,
+            rgba(255, 255, 255, 0.05) -2.98%,
+            rgba(255, 255, 255, 0.008) 49.65%,
+            rgba(255, 255, 255, 0.05) 102.98%
+        );
         backdrop-filter: blur(2px);
         border-radius: 26px;
 
@@ -2602,10 +2625,12 @@ section.touch {
     }
 
     .action-btn {
-        background: linear-gradient(89.96deg,
-                rgba(255, 255, 255, 0.05) 0.03%,
-                rgba(255, 255, 255, 0.008) 49.67%,
-                rgba(255, 255, 255, 0.05) 99.96%);
+        background: linear-gradient(
+            89.96deg,
+            rgba(255, 255, 255, 0.05) 0.03%,
+            rgba(255, 255, 255, 0.008) 49.67%,
+            rgba(255, 255, 255, 0.05) 99.96%
+        );
 
         span {
             padding: 15px 52px;
@@ -2966,10 +2991,12 @@ section.touch {
 }
 
 .watch-video__main {
-    background: linear-gradient(89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%);
+    background: linear-gradient(
+        89.96deg,
+        rgba(255, 255, 255, 0.05) 0.03%,
+        rgba(255, 255, 255, 0.008) 49.67%,
+        rgba(255, 255, 255, 0.05) 99.96%
+    );
     backdrop-filter: blur(2px);
 
     border-radius: 26px;

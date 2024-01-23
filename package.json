@@ -1,12 +1,24 @@
 {
     "name": "cyboxreact",
     "version": "0.1.0",
-    "private": true,
     "type": "module",
+    "license": "UNLICENSED",
+    "private": true,
     "scripts": {
-        "start": "vite",
+        "build": "vite build",
         "commit": "cz",
-        "build": "vite build"
+        "fix": "yarn format && yarn lint:fix",
+        "fix:eslint": "eslint src --ext .js,.ts,.jsx,.tsx --fix",
+        "fix:prettier": "prettier --write .",
+        "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+        "lint": "eslint --ext .ts,.tsx ./src",
+        "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
+        "start": "vite"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.1.1",
@@ -30,12 +42,15 @@
         "web-vitals": "^2.1.4"
     },
     "devDependencies": {
+        "@commitlint/cli": "^18.5.0",
+        "@commitlint/config-conventional": "^18.5.0",
         "@popperjs/core": "^2.11.8",
         "@trivago/prettier-plugin-sort-imports": "^4.3.0",
         "@vitejs/plugin-react": "^4.2.1",
         "bootstrap": "^5.3.2",
         "commitizen": "^4.3.0",
         "cz-conventional-changelog": "^3.3.0",
+        "husky": "^8.0.3",
         "node-sass": "^7.0.1",
         "prettier": "^3.2.4",
         "prettier-plugin-multiline-arrays": "^3.0.1",
@@ -55,15 +70,15 @@
             "last 1 safari version"
         ]
     },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
     "eslintConfig": {
         "extends": [
             "react-app",
             "react-app/jest"
         ]
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
     }
 }
