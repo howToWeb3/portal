@@ -6,12 +6,13 @@
     "private": true,
     "scripts": {
         "build": "vite build",
+        "check:format": "prettier --check 'src/**/*.{js,jsx,ts,tsx}'",
         "commit": "cz",
         "fix": "yarn format && yarn lint:fix",
         "fix:eslint": "eslint src --ext .js,.ts,.jsx,.tsx --fix",
         "fix:prettier": "prettier --write .",
         "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
-        "lint": "eslint --ext .ts,.tsx ./src",
+        "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
         "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
         "start": "vite"
     },
