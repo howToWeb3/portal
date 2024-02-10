@@ -1,4 +1,4 @@
-@use '../../scss/abstracts' as *;
+@use '../../scss/abstracts'as *;
 
 /* Header
 -------------------------------------------------------------- */
@@ -28,6 +28,13 @@
 
     .header__body {
         @include flex(center, space-between);
+
+        .header__logo {
+            img {
+                height: 45px;
+                margin-left: 20px;
+            }
+        }
     }
 
     .header__right {
@@ -205,7 +212,7 @@
                                 }
                             }
 
-                            &.current-item > a {
+                            &.current-item>a {
                                 color: var(--primary-color);
                             }
                         }
@@ -217,7 +224,7 @@
                         transform: translateY(26px);
                     }
 
-                    &.menu-item-has-children > a {
+                    &.menu-item-has-children>a {
                         &:after {
                             color: rgba(255 255 255 / 50%);
                             font-family: 'icomoon';
@@ -232,7 +239,7 @@
                     }
                 }
 
-                li.active > a {
+                li.active>a {
                     color: var(--primary-color);
                 }
             }
@@ -311,7 +318,7 @@
                             }
                         }
 
-                        &.menu-item-has-children > a::after {
+                        &.menu-item-has-children>a::after {
                             content: '\f107';
                             font-family: 'Font Awesome 5 Pro';
                             font-weight: 300;
@@ -366,6 +373,17 @@
             margin-left: 30px;
         }
 
+        .address-btn {
+            font-size: 12px;
+
+            span {
+                border: 1px solid var(--primary-color);
+                text-overflow: ellipsis;
+                padding: 10px 20px;
+                border-radius: 20px;
+            }
+        }
+
         @include tablet {
             margin-right: 40px;
         }
@@ -377,8 +395,8 @@
 }
 
 #main-nav {
-    > ul {
-        > li {
+    >ul {
+        >li {
             .sub-menu {
                 li {
                     position: relative;
@@ -471,7 +489,7 @@
                     }
                 }
 
-                &.menu-item-has-children > a {
+                &.menu-item-has-children>a {
                     &::after {
                         display: none;
                     }
@@ -488,7 +506,7 @@
                     }
                 }
 
-                &.menu-item-has-children.active > a {
+                &.menu-item-has-children.active>a {
                     padding-bottom: 5px;
 
                     &::before {

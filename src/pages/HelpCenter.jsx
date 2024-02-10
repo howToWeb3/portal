@@ -62,7 +62,7 @@ function HelpCenter(props) {
                                                         />
                                                         <stop
                                                             offset="0.855177"
-                                                            stopColor="#4628ff"
+                                                            stopColor="#0af"
                                                         />
                                                     </linearGradient>
                                                 </defs>

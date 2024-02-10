@@ -1,49 +1,58 @@
-import React, { useState } from 'react';
+import { LINKS } from 'constants/common';
+import React, { useEffect, useState } from 'react';
 
-function Speciality(props) {
-    const { data } = props;
-
+function Speciality() {
     const [
-        dataBlock,
-    ] = useState({
-        subheading: 'Our Speciality',
-        heading: 'Complete Solutions for your NFT',
-        desc: 'Cyfonii is the premier marketplace for nifties, which are digital items you can truly own for yourself',
-    });
+        data,
+        setData,
+    ] = useState({});
+
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch(`${LINKS.CDN}/locales/en/speciality.json`);
+            const data = await response.json();
+            setData(data);
+        }
+
+        fetchData();
+    }, []);
+
     return (
         <section className="speciality">
             <div className="shape right"></div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-12">
-                        <div className="block-text center">
-                            <h6 className="sub-heading">
-                                <span>{dataBlock.subheading}</span>
-                            </h6>
-                            <h3 className="heading pd">{dataBlock.heading}</h3>
-                            <p className="">{dataBlock.desc}</p>
-                        </div>
-                    </div>
-                    {data.map(idx => (
-                        <div
-                            key={idx.id}
-                            className="col-xl-3 col-md-6"
-                        >
-                            <div className="speciality-box">
-                                <div className="icon">
-                                    <img
-                                        src={idx.img}
-                                        alt="Cyfonii"
-                                    />
-                                </div>
-                                <h5 className="title">{idx.title}</h5>
-                                <p>{idx.desc}</p>
-                                <h3 className="number">0{idx.id}</h3>
+            {data.heading && (
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="block-text center">
+                                <h6 className="sub-heading">
+                                    <span>{data.subheading}</span>
+                                </h6>
+                                <h3 className="heading pd">{data.heading}</h3>
+                                <p className="">{data.desc}</p>
                             </div>
                         </div>
-                    ))}
+                        {data.items.map(idx => (
+                            <div
+                                key={idx.id}
+                                className="col-xl-3 col-md-6"
+                            >
+                                <div className="speciality-box">
+                                    <div className="icon">
+                                        <img
+                                            src={LINKS.CDN + idx.img}
+                                            alt="icon"
+                                        />
+                                    </div>
+                                    <h5 className="title">{idx.title}</h5>
+                                    <p>{idx.desc}</p>
+                                    <h3 className="number">0{idx.id}</h3>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
+            )}
         </section>
     );
 }

@@ -1,0 +1,112 @@
+@use '../abstracts/'as *;
+
+.page-swap {
+    min-height: 100vh;
+
+    // mobile 
+    @include mobile {
+        min-height: auto;
+        padding: 20px;
+
+        .selection-flex {
+            flex-direction: column;
+            gap: 10px;
+
+            .column-full {
+                width: 100%;
+
+                input {
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .bottom-section {
+            padding-top: 50px;
+        }
+    }
+
+
+    .selection-btn {
+        border-radius: 0px 10px 10px 0;
+        -webkit-border-radius: 0px 10px 10px 0;
+        -moz-border-radius: 0px 10px 10px 0;
+        -ms-border-radius: 0px 10px 10px 0;
+        -o-border-radius: 0px 10px 10px 0;
+
+        @include mobile {
+            border-radius: 10px;
+        }
+    }
+
+    .selection-input {
+        border-radius: 10px 0px 0px 10px;
+        -webkit-border-radius: 10px 0px 0px 10px;
+        -moz-border-radius: 10px 0px 0px 10px;
+        -ms-border-radius: 10px 0px 0px 10px;
+        -o-border-radius: 10px 0px 0px 10px;
+        background-color: transparent !important;
+        border: 1px solid white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        color: white;
+
+        &::placeholder {
+            color: white;
+            font-style: italic;
+        }
+
+        &:focus {
+            color: white;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 2px var(--primary-color);
+        }
+    }
+
+    .cursor-not-allowed {
+        cursor: not-allowed;
+    }
+
+    .customeSwapIcon {
+        padding: 13px;
+        border-radius: 100%;
+        border: 1px solid #ffffff47;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            border: 1px solid #ffffff;
+        }
+
+        &.rotate {
+            transform: rotate(180deg);
+        }
+    }
+
+    .customTooltip {
+        --bs-tooltip-bg: var(--bs-danger);
+        --bs-tooltip-color: var(--bs-white)
+    }
+}
+
+
+.dropdown {
+    color: black;
+
+    .selection-ul {
+        max-height: 150px;
+    }
+
+    input,
+    input:focus {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid var(--primary-color);
+        border-radius: 0;
+
+    }
+
+    input:focus {
+        border-color: var(--primary-color);
+        box-shadow: none;
+    }
+}

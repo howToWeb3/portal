@@ -1,5 +1,6 @@
+import { LINKS } from 'constants/common';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
@@ -10,68 +11,75 @@ Testimonials.propTypes = {
     data: PropTypes.array,
 };
 
-function Testimonials(props) {
-    const { data } = props;
-
+function Testimonials() {
     const [
-        dataBlock,
-    ] = useState({
-        subheading: 'Testimonials',
-        heading: 'What People Say',
-    });
+        data,
+        setData,
+    ] = useState({});
+
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch(`${LINKS.CDN}/locales/en/testimonials.json`);
+            const data = await response.json();
+            setData(data);
+        }
+        fetchData();
+    }, []);
 
     return (
         <section className="testimonials">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="testimonials__main">
-                            <div className="block-text center">
-                                <h6 className="sub-heading">
-                                    <span>{dataBlock.heading}</span>
-                                </h6>
-                                <h3
-                                    className="heading wow"
-                                    data-splitting
-                                >
-                                    {dataBlock.heading}
-                                </h3>
-                            </div>
+            {data.heading && (
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="testimonials__main">
+                                <div className="block-text center">
+                                    <h6 className="sub-heading">
+                                        <span>{data.heading}</span>
+                                    </h6>
+                                    <h3
+                                        className="heading wow"
+                                        data-splitting
+                                    >
+                                        {data.heading}
+                                    </h3>
+                                </div>
 
-                            <Swiper
-                                spaceBetween={0}
-                                slidesPerView={1}
-                                className="testimonials-swiper"
-                                loop={true}
-                                modules={Pagination}
-                                pagination
-                            >
-                                {data.map(idx => (
-                                    <SwiperSlide key={idx.id}>
-                                        <div className="swiper-slide">
-                                            <div className="box-testimonial center">
-                                                <img
-                                                    src={idx.icon}
-                                                    alt="Cyfonii"
-                                                />
-                                                <p className="text">{idx.text}</p>
-                                                <div className="info">
+                                <Swiper
+                                    spaceBetween={0}
+                                    slidesPerView={1}
+                                    className="testimonials-swiper"
+                                    loop={true}
+                                    modules={Pagination}
+                                    pagination
+                                >
+                                    {data.items.map(idx => (
+                                        <SwiperSlide key={idx.id}>
+                                            <div className="swiper-slide">
+                                                <div className="box-testimonial center">
                                                     <img
-                                                        src={idx.avt}
-                                                        alt="Cyfonii"
+                                                        src={LINKS.CDN + idx.icon}
+                                                        alt="icon"
                                                     />
-                                                    <h5 className="name">{idx.name}</h5>
-                                                    <p>{idx.position}</p>
+                                                    <p className="text">{idx.text}</p>
+                                                    <div className="info">
+                                                        <img
+                                                            src={LINKS.CDN + idx.avt}
+                                                            alt="avatar"
+                                                        />
+                                                        <h5 className="name">{idx.name}</h5>
+                                                        <p>{idx.position}</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </SwiperSlide>
-                                ))}
-                            </Swiper>
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            )}
         </section>
     );
 }

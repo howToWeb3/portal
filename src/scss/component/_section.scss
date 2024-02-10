@@ -1,4 +1,4 @@
-@use '../abstracts/' as *;
+@use '../abstracts/'as *;
 
 .about {
     padding: 0 0 100px;
@@ -292,7 +292,7 @@
     border-radius: 15px;
 
     .icon {
-        background: linear-gradient(289.89deg, #c7d2ff -23.71%, #4628ff 96.09%);
+        background: linear-gradient(289.89deg, #c7d2ff -23.71%, #0af 96.09%);
         backdrop-filter: blur(4px);
         width: 105px;
         height: 105px;
@@ -367,19 +367,17 @@
     margin-bottom: 19px;
 
     .step {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
         backdrop-filter: blur(4px);
         border-radius: 100px;
         position: absolute;
         top: -15px;
         left: 22px;
         padding: 6px 16px;
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%), #ffffff;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -544,6 +542,7 @@
 }
 
 .banner.s2 {
+
     .swiper-button-next,
     .swiper-button-prev {
         width: 60px;
@@ -595,12 +594,10 @@
 }
 
 .project-box {
-    background: linear-gradient(
-        89.96deg,
-        rgba(255, 255, 255, 0.05) 0.03%,
-        rgba(255, 255, 255, 0.008) 49.67%,
-        rgba(255, 255, 255, 0.05) 99.96%
-    );
+    background: linear-gradient(89.96deg,
+            rgba(255, 255, 255, 0.05) 0.03%,
+            rgba(255, 255, 255, 0.008) 49.67%,
+            rgba(255, 255, 255, 0.05) 99.96%);
     backdrop-filter: blur(4px);
     border-radius: 26px;
     padding: 20px;
@@ -721,7 +718,7 @@
             left: 46%;
             width: 19px;
             height: 19px;
-            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%), #ffffff;
+            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%), #ffffff;
             border: 4px solid #1f223e;
             border-radius: 50%;
         }
@@ -754,7 +751,7 @@
         width: 11px;
         height: 11px;
         border-radius: 50%;
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%), #ffffff;
 
         &.bottom {
             top: auto;
@@ -865,7 +862,7 @@
         right: -37px;
         width: 11px;
         height: 11px;
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%), #ffffff;
 
         border-radius: 50%;
         animation: 2s pulse-anim infinite;
@@ -898,19 +895,17 @@
     }
 
     .time {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
         backdrop-filter: blur(4px);
         border-radius: 100px;
         position: absolute;
         top: -15px;
         left: 29px;
         padding: 6px 16px;
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%), #ffffff;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -931,7 +926,7 @@
             width: 60px;
             height: 4px;
 
-            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
+            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
             border-radius: 1.2px;
             position: absolute;
             bottom: 0;
@@ -1013,7 +1008,7 @@
                             }
 
                             &:hover {
-                                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
+                                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
 
                                 span::before {
                                     color: #fff;
@@ -1049,12 +1044,10 @@
 
 .team-box {
     .image {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
         backdrop-filter: blur(4px);
         padding: 12px;
         position: relative;
@@ -1065,13 +1058,11 @@
         overflow: hidden;
 
         &::after {
-            background: linear-gradient(
-                90deg,
-                rgba(255, 255, 255, 0.13) 0px,
-                rgba(255, 255, 255, 0.13) 77%,
-                rgba(255, 255, 255, 0.5) 92%,
-                rgba(255, 255, 255, 0)
-            );
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.13) 0px,
+                    rgba(255, 255, 255, 0.13) 77%,
+                    rgba(255, 255, 255, 0.5) 92%,
+                    rgba(255, 255, 255, 0));
             content: '';
             height: 200%;
             left: -210%;
@@ -1141,7 +1132,7 @@
             @include flex(center, center);
 
             &:hover {
-                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
+                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
             }
         }
     }
@@ -1188,12 +1179,10 @@
     }
 
     .testimonials__main {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
         backdrop-filter: blur(2px);
         border-radius: 26px;
 
@@ -1393,7 +1382,7 @@
             cursor: pointer;
 
             &.react-tabs__tab--selected {
-                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%), rgba(255, 255, 255, 0.1);
+                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%), rgba(255, 255, 255, 0.1);
             }
 
             @include mobile {
@@ -1405,12 +1394,10 @@
 
 .flat-accordion {
     .accordion-item {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
         margin-bottom: 12px;
         padding: 10px;
     }
@@ -1457,7 +1444,7 @@
 }
 
 .create__main {
-    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
+    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
     border-radius: 26px;
     position: relative;
 
@@ -1510,7 +1497,7 @@
 }
 
 .couter__main {
-    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
+    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
     border-radius: 26px;
     padding: 37px 43px;
     position: relative;
@@ -1606,12 +1593,10 @@
     }
 
     .image {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
         backdrop-filter: blur(4px);
         padding: 14px;
         position: relative;
@@ -1622,13 +1607,11 @@
         overflow: hidden;
 
         &::after {
-            background: linear-gradient(
-                90deg,
-                rgba(255, 255, 255, 0.13) 0px,
-                rgba(255, 255, 255, 0.13) 77%,
-                rgba(255, 255, 255, 0.5) 92%,
-                rgba(255, 255, 255, 0)
-            );
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.13) 0px,
+                    rgba(255, 255, 255, 0.13) 77%,
+                    rgba(255, 255, 255, 0.5) 92%,
+                    rgba(255, 255, 255, 0));
             content: '';
             height: 200%;
             left: -210%;
@@ -1694,7 +1677,7 @@
 
     .token__main {
         margin-top: 68px;
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
         border-radius: 16px;
         padding: 31px;
     }
@@ -1803,7 +1786,7 @@
                 top: auto;
                 bottom: 0;
 
-                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
+                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
                 border-radius: 1.2px;
             }
         }
@@ -1870,12 +1853,10 @@
     input.form-control,
     select,
     textarea {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
         backdrop-filter: blur(2px);
 
         border-radius: 6px;
@@ -1999,20 +1980,6 @@ section.touch {
             &:hover {
                 color: #fff;
             }
-
-            // &:after {
-            //     font-family: "Font Awesome 5 Pro";
-            //     font-size: 12px;
-            //     font-weight: 400;
-            //     content: "\f078";
-            //     position: absolute;
-            //     right: 21px;
-            //     top: 50%;
-            //     -webkit-transform: translateY(-50%);
-            //     -ms-transform: translateY(-50%);
-            //     -o-transform: translateY(-50%);
-            //     transform: translateY(-50%);
-            // }
         }
 
         ul {
@@ -2183,7 +2150,7 @@ section.touch {
         }
 
         .sc-button {
-            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
+            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
             border-radius: 8px;
             padding: 8px 20px;
             color: #fff;
@@ -2191,13 +2158,11 @@ section.touch {
             overflow: hidden;
 
             &::after {
-                background: linear-gradient(
-                    90deg,
-                    rgba(255, 255, 255, 0.13) 0px,
-                    rgba(255, 255, 255, 0.13) 77%,
-                    rgba(255, 255, 255, 0.5) 92%,
-                    rgba(255, 255, 255, 0)
-                );
+                background: linear-gradient(90deg,
+                        rgba(255, 255, 255, 0.13) 0px,
+                        rgba(255, 255, 255, 0.13) 77%,
+                        rgba(255, 255, 255, 0.5) 92%,
+                        rgba(255, 255, 255, 0));
                 content: '';
                 height: 200%;
                 left: -210%;
@@ -2305,7 +2270,7 @@ section.touch {
                     width: 60px;
                     height: 1px;
 
-                    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
+                    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
                     border-radius: 1.2px;
                 }
             }
@@ -2422,7 +2387,7 @@ section.touch {
                             font-size: 14px;
 
                             &:hover {
-                                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
+                                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
                                 color: #fff;
                             }
                         }
@@ -2456,12 +2421,10 @@ section.touch {
     margin-bottom: 30px;
 
     .image {
-        background: linear-gradient(
-            89.95deg,
-            rgba(255, 255, 255, 0.05) -2.98%,
-            rgba(255, 255, 255, 0.008) 49.65%,
-            rgba(255, 255, 255, 0.05) 102.98%
-        );
+        background: linear-gradient(89.95deg,
+                rgba(255, 255, 255, 0.05) -2.98%,
+                rgba(255, 255, 255, 0.008) 49.65%,
+                rgba(255, 255, 255, 0.05) 102.98%);
         backdrop-filter: blur(2px);
         border-radius: 26px;
 
@@ -2599,7 +2562,7 @@ section.touch {
                 color: #fff;
 
                 &:hover {
-                    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
+                    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
                 }
             }
         }
@@ -2625,12 +2588,10 @@ section.touch {
     }
 
     .action-btn {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
 
         span {
             padding: 15px 52px;
@@ -2729,7 +2690,7 @@ section.touch {
                         font-size: 12px;
 
                         &:hover {
-                            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
+                            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
                         }
                     }
                 }
@@ -2991,12 +2952,10 @@ section.touch {
 }
 
 .watch-video__main {
-    background: linear-gradient(
-        89.96deg,
-        rgba(255, 255, 255, 0.05) 0.03%,
-        rgba(255, 255, 255, 0.008) 49.67%,
-        rgba(255, 255, 255, 0.05) 99.96%
-    );
+    background: linear-gradient(89.96deg,
+            rgba(255, 255, 255, 0.05) 0.03%,
+            rgba(255, 255, 255, 0.008) 49.67%,
+            rgba(255, 255, 255, 0.05) 99.96%);
     backdrop-filter: blur(2px);
 
     border-radius: 26px;
@@ -3185,9 +3144,9 @@ section.touch {
     font-size: 30px;
 }
 
-.modal {
-    z-index: 999999 !important;
-}
+// .modal {
+//     z-index: 999999 !important;
+// }
 
 .modal-open .modal {
     overflow: hidden !important;

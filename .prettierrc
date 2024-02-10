@@ -15,7 +15,8 @@
         {
             "files": [
                 ".prettierrc",
-                ".eslintrc"
+                ".eslintrc",
+                "jsconfig.json"
             ],
             "options": {
                 "parser": "json"

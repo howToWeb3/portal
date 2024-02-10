@@ -1,4 +1,4 @@
-@use '../abstracts/' as *;
+@use '../abstracts/'as *;
 
 .banner {
     position: relative;
@@ -11,7 +11,7 @@
             margin-bottom: 40px;
 
             span {
-                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%);
+                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
 
@@ -19,14 +19,15 @@
             }
 
             span.s1 {
+                font-size: 46px;
+
                 &::after {
                     content: '';
                     width: 317.39px;
                     height: 64.77px;
                     position: absolute;
                     bottom: -57px;
-                    left: -63px;
-
+                    left: 420px;
                     background: url('../../assets/images/icon/Line.png') no-repeat;
                 }
             }
@@ -35,7 +36,7 @@
         .desc {
             padding-right: 130px;
             margin-bottom: 40px;
-            font-size: 16px;
+            font-size: 26px;
 
             @include desktop-1200 {
                 padding: 0;
@@ -81,6 +82,10 @@
                                 font-size: 33px;
                                 opacity: 0.3;
                                 transition: all 0.3s ease-in-out;
+
+                                &.fs {
+                                    font-size: 18px;
+                                }
                             }
 
                             &:hover {
@@ -173,6 +178,7 @@
         .owner {
             display: flex;
             align-items: center;
+            cursor: pointer;
             padding: 20px;
             background: $white;
             border-radius: 30px;
@@ -293,12 +299,10 @@
 
 .card-box {
     width: 397px;
-    background: linear-gradient(
-        89.96deg,
-        rgba(255, 255, 255, 0.05) 0.03%,
-        rgba(255, 255, 255, 0.008) 49.66%,
-        rgba(255, 255, 255, 0.05) 99.96%
-    );
+    background: linear-gradient(89.96deg,
+            rgba(255, 255, 255, 0.05) 0.03%,
+            rgba(255, 255, 255, 0.008) 49.66%,
+            rgba(255, 255, 255, 0.05) 99.96%);
     backdrop-filter: blur(2px);
     padding: 31px 23px;
     border-radius: 20px;
@@ -325,7 +329,7 @@
             margin-bottom: -5px;
 
             &.price {
-                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%), #ffffff;
+                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%), #ffffff;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
@@ -482,15 +486,13 @@
 }
 
 .banner-box {
-    background: linear-gradient(
-        89.96deg,
-        rgba(255, 255, 255, 0.05) 0.03%,
-        rgba(255, 255, 255, 0.008) 49.67%,
-        rgba(255, 255, 255, 0.05) 99.96%
-    );
+    background: linear-gradient(89.96deg,
+            rgba(255, 255, 255, 0.05) 0.03%,
+            rgba(255, 255, 255, 0.008) 49.67%,
+            rgba(255, 255, 255, 0.05) 99.96%);
     backdrop-filter: blur(2px);
     border-radius: 20px;
-    padding: 20px 26px 0px 14px;
+    padding: 20px 26px 20px 14px;
 
     .top {
         display: flex;
@@ -503,6 +505,12 @@
         .title {
             font-weight: 600;
             font-size: 26px;
+            margin-left: 20px;
+
+            // for mobile
+            @include mobile {
+                margin-left: 0;
+            }
         }
 
         .wishlist {
@@ -527,6 +535,13 @@
 
     .main {
         display: flex;
+        justify-content: space-around;
+
+        @include mobile {
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
 
         p {
             color: rgba(255, 255, 255, 0.5);

@@ -1,4 +1,4 @@
-@use '../abstracts/' as *;
+@use '../abstracts/'as *;
 
 .page-title {
     position: relative;
@@ -11,26 +11,24 @@
         width: 800px;
         height: 800px;
     }
+
     .page-title__body {
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(89.96deg,
+                rgba(255, 255, 255, 0.05) 0.03%,
+                rgba(255, 255, 255, 0.008) 49.67%,
+                rgba(255, 255, 255, 0.05) 99.96%);
         backdrop-filter: blur(2px);
 
         border-radius: 26px;
         padding: 16px;
     }
+
     .page-title__main {
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #4628ff 103.12%),
-            linear-gradient(
-                89.96deg,
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%),
+            linear-gradient(89.96deg,
                 rgba(255, 255, 255, 0.05) 0.03%,
                 rgba(255, 255, 255, 0.008) 49.67%,
-                rgba(255, 255, 255, 0.05) 99.96%
-            );
+                rgba(255, 255, 255, 0.05) 99.96%);
         backdrop-filter: blur(2px);
 
         border-radius: 26px;
@@ -41,6 +39,7 @@
             padding-top: 35px;
             margin-top: 30px;
             position: relative;
+
             &::before {
                 content: '';
                 position: absolute;
@@ -52,6 +51,7 @@
                 width: 96px;
                 background: rgba(255, 255, 255, 0.1);
             }
+
             p {
                 font-size: 12px;
                 color: rgba(255, 255, 255, 0.5);
@@ -64,7 +64,7 @@
         }
     }
 
-    .breacrumb {
+    .breadcrumb {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -76,6 +76,7 @@
             font-size: 14px;
             color: #fff;
             font-family: 'Readex Pro';
+
             a {
                 font-weight: 300;
                 font-size: 14px;

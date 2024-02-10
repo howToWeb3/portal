@@ -1,0 +1,9 @@
+{
+    "swap": {
+        "title": "Swap",
+        "info": "Info",
+        "tooltip": "To use swap, you need to have trustlines with the tokens you want to swap.",
+        "description": "Swap is a feature that allows you to exchange one token for another. We use XRPL Orderbooks to find the best price for you. The swap feature is powered by the XRPL DEX and is non-custodial which means you are always in control of your funds. The order is executed instantly and the tokens are transferred to your wallet. If you are swapping between a token pair that has low liquidity, the swap may not be executed.",
+        "confirmSwapButtonText": "Confirm Swap"
+    }
+}

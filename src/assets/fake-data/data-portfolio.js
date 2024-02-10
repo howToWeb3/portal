@@ -8,25 +8,25 @@ const dataPortfolio = [
         id: 1,
         img: img1,
         title: 'Connect your wallet',
-        desc: 'Suspendisse tristique neque a lorem placerat pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos',
+        desc: 'Click on the connect button and connect your XUMM/Xaman wallet to the platform',
     },
     {
         id: 2,
         img: img2,
-        title: 'Buy your NFT',
-        desc: 'Suspendisse tristique neque a lorem placerat pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos',
+        title: 'Buy a Meme-FT',
+        desc: 'Browse through the collection and buy the meme-FT of your choice',
     },
     {
         id: 3,
         img: img3,
-        title: 'Create collection',
-        desc: 'Suspendisse tristique neque a lorem placerat pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos',
+        title: 'Show-off your collection',
+        desc: 'Share your collection with your friends and family on social media',
     },
     {
         id: 4,
         img: img4,
-        title: 'Sell your NFT',
-        desc: 'Suspendisse tristique neque a lorem placerat pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos',
+        title: 'Auction your Meme-FT',
+        desc: 'Display your hand-crafted meme-FTs in the marketplace and auction them off',
     },
 ];
 

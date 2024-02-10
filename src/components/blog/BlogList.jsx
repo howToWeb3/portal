@@ -1,3 +1,4 @@
+import { LINKS } from 'constants/common';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -9,6 +10,9 @@ BlogList.propTypes = {
 
 function BlogList(props) {
     const { data } = props;
+
+    if (!data) return null;
+
     return (
         <section className="bloglist">
             <div className="container">
@@ -23,7 +27,7 @@ function BlogList(props) {
                                     <div className="image">
                                         <Link to="/blog-details">
                                             <img
-                                                src={idx.img}
+                                                src={LINKS.CDN + idx.img}
                                                 alt="cyfonii"
                                             />
                                         </Link>

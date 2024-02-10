@@ -8,25 +8,25 @@ const dataBox = [
         id: 1,
         img: img1,
         title: 'Huge Collection',
-        desc: 'Oficia dese runt mollit anim id est labo met, consectetur adipis',
+        desc: 'Experience a diverse range of digital assets in our collection',
     },
     {
         id: 2,
         img: img2,
         title: 'High Quality',
-        desc: 'Oficia dese runt mollit anim id est labo met, consectetur adipis',
+        desc: 'Superior quality digital memes created by our talented artists',
     },
     {
         id: 3,
         img: img3,
         title: 'Top Resource',
-        desc: 'Oficia dese runt mollit anim id est labo met, consectetur adipis',
+        desc: 'Gathered memes from top resources in the industry',
     },
     {
         id: 4,
         img: img4,
         title: 'Big Community',
-        desc: 'Oficia dese runt mollit anim id est labo met, consectetur adipis',
+        desc: 'Community as big as the moon, and growing everyday',
     },
 ];
 

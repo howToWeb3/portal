@@ -1,4 +1,7 @@
 import AOS from 'aos';
+import Footer2 from 'components/footer/Footer2';
+import { AppProvider } from 'context/App.context';
+import { SnackbarProvider } from 'notistack';
 import { React, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
@@ -13,23 +16,33 @@ function App() {
     }, []);
 
     return (
-        <>
-            <Header />
-            <Routes>
-                {routes.map((data, idx) => (
+        <AppProvider>
+            <SnackbarProvider
+                autoHideDuration={2000}
+                maxSnack={3}
+                anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                }}
+            >
+                <Header />
+                <Routes>
+                    {routes.map((data, idx) => (
+                        <Route
+                            key={idx}
+                            path={data.path}
+                            element={data.component}
+                            exact
+                        />
+                    ))}
                     <Route
-                        key={idx}
-                        path={data.path}
-                        element={data.component}
-                        exact
+                        path="*"
+                        element={<Page404 />}
                     />
-                ))}
-                <Route
-                    path="*"
-                    element={<Page404 />}
-                />
-            </Routes>
-        </>
+                </Routes>
+                <Footer2 />
+            </SnackbarProvider>
+        </AppProvider>
     );
 }
 

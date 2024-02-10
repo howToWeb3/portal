@@ -1,4 +1,6 @@
+import { PATHS } from 'constants/common';
 import About from './About';
+import AccountDetails from './AccountDetails';
 import AdvisorsBackers from './AdvisorsBackers';
 import Blog from './Blog';
 import BlogDetails from './BlogDetails';
@@ -11,25 +13,28 @@ import Nfts from './Nfts';
 import ParticipantAssets from './ParticipantAssets';
 import Partners from './Partners';
 import RoadMap from './RoadMap';
+import SwapTokens from './SwapTokens';
 import Team from './Team';
 import VisionsMission from './VisionsMission';
 
 const routes = [
-    { path: '/', component: <Home01 /> },
-    { path: '/home-v2', component: <Home02 /> },
-    { path: '/home-v3', component: <Home03 /> },
-    { path: '/nfts', component: <Nfts /> },
-    { path: '/blog', component: <Blog /> },
-    { path: '/blog-details', component: <BlogDetails /> },
-    { path: '/visions-mission', component: <VisionsMission /> },
-    { path: '/help-center', component: <HelpCenter /> },
-    { path: '/participants-assets', component: <ParticipantAssets /> },
-    { path: '/advisors-backers', component: <AdvisorsBackers /> },
-    { path: '/partners', component: <Partners /> },
-    { path: '/about', component: <About /> },
-    { path: '/road-map', component: <RoadMap /> },
-    { path: '/team', component: <Team /> },
-    { path: '/contact', component: <Contact /> },
+    { path: PATHS.HOME, component: <Home01 /> },
+    { path: PATHS.HOME_V2, component: <Home02 /> },
+    { path: PATHS.HOME_V3, component: <Home03 /> },
+    { path: PATHS.NFTS, component: <Nfts /> },
+    { path: PATHS.BLOG, component: <Blog /> },
+    { path: PATHS.BLOG_DETAILS, component: <BlogDetails /> },
+    { path: PATHS.VISIONS_MISSION, component: <VisionsMission /> },
+    { path: PATHS.HELP_CENTER, component: <HelpCenter /> },
+    { path: PATHS.PARTICIPANTS_ASSETS, component: <ParticipantAssets /> },
+    { path: PATHS.ADVISORS_BACKERS, component: <AdvisorsBackers /> },
+    { path: PATHS.PARTNERS, component: <Partners /> },
+    { path: PATHS.ABOUT, component: <About /> },
+    { path: PATHS.ROAD_MAP, component: <RoadMap /> },
+    { path: PATHS.TEAM, component: <Team /> },
+    { path: PATHS.CONTACT, component: <Contact /> },
+    { path: PATHS.ACCOUNT_DETAILS, component: <AccountDetails /> },
+    { path: PATHS.SWAP_TOKEN, component: <SwapTokens /> },
 ];
 
 export default routes;

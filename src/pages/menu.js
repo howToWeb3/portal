@@ -2,24 +2,24 @@ const menus = [
     {
         id: 1,
         name: 'Home',
-        links: '#',
-        namesub: [
-            {
-                id: 1,
-                sub: 'Home 01',
-                links: '/',
-            },
-            {
-                id: 2,
-                sub: 'Home 02',
-                links: '/home-v2',
-            },
-            {
-                id: 3,
-                sub: 'Home 03',
-                links: '/home-v3',
-            },
-        ],
+        links: '/',
+        // namesub: [
+        //     {
+        //         id: 1,
+        //         sub: 'Home 01',
+        //         links: '/',
+        //     },
+        //     {
+        //         id: 2,
+        //         sub: 'Home 02',
+        //         links: '/home-v2',
+        //     },
+        //     {
+        //         id: 3,
+        //         sub: 'Home 03',
+        //         links: '/home-v3',
+        //     },
+        // ],
     },
     {
         id: 2,
@@ -28,41 +28,46 @@ const menus = [
         namesub: [
             {
                 id: 1,
+                sub: 'Swap',
+                links: '/swap',
+            },
+            {
+                id: 2,
                 sub: 'NFTs',
                 links: '/nfts',
             },
             {
-                id: 2,
+                id: 3,
                 sub: 'Blog List',
                 links: '/blog',
             },
             {
-                id: 3,
+                id: 4,
                 sub: 'Blog Details',
                 links: '/blog-details',
             },
             {
-                id: 4,
+                id: 5,
                 sub: 'Visions & Mission',
                 links: '/visions-mission',
             },
             {
-                id: 5,
+                id: 6,
                 sub: 'Help Center',
                 links: '/help-center',
             },
             {
-                id: 6,
+                id: 7,
                 sub: 'Participants & Assets',
                 links: '/participants-assets',
             },
             {
-                id: 7,
+                id: 8,
                 sub: 'Advisors & Backers',
                 links: '/advisors-backers',
             },
             {
-                id: 8,
+                id: 9,
                 sub: 'Partners & Investors',
                 links: '/partners',
             },

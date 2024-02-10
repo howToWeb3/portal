@@ -1,6 +1,6 @@
-import img from 'assets/images/background/line.png';
+import { LINKS } from 'constants/common';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../button/Button';
 
 Roadmap.propTypes = {
@@ -8,20 +8,27 @@ Roadmap.propTypes = {
 };
 
 function Roadmap(props) {
-    const { data } = props;
-
     const [
-        dataBlock,
-    ] = useState({
-        subheading: 'Road Map',
-        heading: 'The Journey of Cyfonii NFT',
-    });
+        data,
+        setData,
+    ] = useState({});
+
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch(`${LINKS.CDN}/locales/en/roadmap.json`);
+            const data = await response.json();
+            setData(data);
+        }
+        fetchData();
+    }, []);
+
+    if (!data.heading) return null;
 
     return (
         <section className="roadmap">
             <img
-                src={img}
-                alt=""
+                src={LINKS.CDN + data.bgLineImg}
+                alt="bg-line"
                 className="img-line"
             />
             <div className="shape"></div>
@@ -30,17 +37,16 @@ function Roadmap(props) {
                     <div className="col-12">
                         <div className="block-text center">
                             <h6 className="sub-heading">
-                                <span>{dataBlock.subheading}</span>
+                                <span>{data.subheading}</span>
                             </h6>
-                            <h3 className="heading pd">{dataBlock.heading}</h3>
+                            <h3 className="heading pd">{data.heading}</h3>
                         </div>
-
                         <div
                             className="roadmap__main"
                             data-aos="fade-up"
                             data-aos-duration="2000"
                         >
-                            {data.map(idx => (
+                            {data.items.map(idx => (
                                 <div
                                     key={idx.id}
                                     className={`roadmap-box ${idx.class}`}
@@ -58,7 +64,7 @@ function Roadmap(props) {
                         </div>
                         <div className="button">
                             <Button
-                                title="View Full Road Map"
+                                title={data.fullRoadMapBtnText}
                                 link="/road-map"
                             />
                         </div>

@@ -1,36 +1,46 @@
-import img from 'assets/images/layouts/create.png';
-import React, { useState } from 'react';
+import { LINKS } from 'constants/common';
+import React, { useEffect, useState } from 'react';
 import Button from '../button/Button';
 
 function Create(props) {
     const [
-        dataBlock,
-    ] = useState({
-        heading: 'Create your NFT portfolio',
-        desc: 'Get udpated with news, tips & tricks',
-    });
+        data,
+        setData,
+    ] = useState({});
+
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch(`${LINKS.CDN}/locales/en/nftCreate.json`);
+            const data = await response.json();
+            setData(data);
+        }
+        fetchData();
+    }, []);
+
     return (
         <section className="create">
-            <div className="container">
-                <div className="row">
-                    <div className="col-12">
-                        <div className="create__main">
-                            <div className="content">
-                                <h4 className="heading">{dataBlock.heading}</h4>
-                                <p>{dataBlock.desc}</p>
-                                <Button
-                                    title="Join Now"
-                                    link="/contact"
+            {data.heading && (
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="create__main">
+                                <div className="content">
+                                    <h4 className="heading">{data.heading}</h4>
+                                    <p>{data.desc}</p>
+                                    <Button
+                                        title="Join Now"
+                                        link="/contact"
+                                    />
+                                </div>
+                                <img
+                                    src={LINKS.CDN + data.createBackgroundImg}
+                                    alt="background"
                                 />
                             </div>
-                            <img
-                                src={img}
-                                alt="Cyfonii"
-                            />
                         </div>
                     </div>
                 </div>
-            </div>
+            )}
         </section>
     );
 }
