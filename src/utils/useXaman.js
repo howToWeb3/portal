@@ -32,7 +32,7 @@ export default function useXaman() {
         try {
             const payload = {
                 method: 'POST',
-                url: 'user/xaman/qr-generate',
+                url: 'xaman/qr-generate',
                 encrypt: false,
                 auth: false,
                 data: {
@@ -81,7 +81,7 @@ export default function useXaman() {
                 } else if (json.payload_uuidv4) {
                     const payload = {
                         method: 'GET',
-                        url: 'user/xaman/validate',
+                        url: 'xaman/validate',
                         params: {
                             uuid: json.payload_uuidv4,
                         },
@@ -133,12 +133,13 @@ export default function useXaman() {
             enqueueSnackbar('Scan using XUMM', { variant: 'info' });
             setState({ loading: true, openModal: true });
             const { data } = await ApiCall(payload);
-            setState({ img: data.refs.qr_png });
-            const { message, success } = await createWebSocketConnection({ data, setState });
+            setState({ img: data.refs.qr_png, loading: false });
+            const { message, success } = await wsForSwap({ data, setState });
             if (!success) {
                 enqueueSnackbar(message, { variant: 'error' });
                 return false;
             }
+            setState({ loading: false });
             return true;
         } catch (err) {
             setState({
@@ -149,7 +150,7 @@ export default function useXaman() {
         }
     };
 
-    const createWebSocketConnection = ({ data, setState }) => {
+    const wsForSwap = ({ data, setState }) => {
         return new Promise((resolve, reject) => {
             let isOpened = false;
             const ws = new WebSocket(data.refs.websocket_status);
@@ -163,7 +164,7 @@ export default function useXaman() {
                 } else if (json.payload_uuidv4) {
                     const payload = {
                         method: 'GET',
-                        url: 'user/xaman/validate',
+                        url: 'xaman/validate',
                         params: {
                             uuid: json.payload_uuidv4,
                             jwt: false,
@@ -181,7 +182,7 @@ export default function useXaman() {
                 } else if (json.opened && !isOpened) {
                     isOpened = true;
                     enqueueSnackbar('Awesome!! swipe to accept', { variant: 'info' });
-                    setState({ opened: true });
+                    setState({ opened: true, loading: true });
                 }
             };
 

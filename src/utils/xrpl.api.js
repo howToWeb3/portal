@@ -3,7 +3,7 @@ import { ApiCall } from './api';
 export async function fetchAccountDetails(address) {
     return new Promise((resolve, reject) => {
         ApiCall({
-            url: 'user/account/details/',
+            url: 'account/details/',
             method: 'GET',
             params: {
                 address,
@@ -21,7 +21,7 @@ export async function fetchAccountDetails(address) {
 export async function fetchAccountNfts(address) {
     return new Promise((resolve, reject) => {
         ApiCall({
-            url: 'user/account/nfts/',
+            url: 'account/nfts/',
             method: 'GET',
             params: {
                 address,
@@ -39,7 +39,7 @@ export async function fetchAccountNfts(address) {
 export async function fetchTrustlines(address) {
     return new Promise((resolve, reject) => {
         ApiCall({
-            url: 'user/account/lines/',
+            url: 'account/lines/',
             method: 'GET',
             params: {
                 address,

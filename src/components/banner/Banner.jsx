@@ -2,7 +2,7 @@ import logo from 'assets/images/logo/logo.png';
 import { LINKS, XAMAN_INITIAL_STATE } from 'constants/common';
 import { useAppContext } from 'context/App.context';
 import React, { useEffect, useState } from 'react';
-import { Modal } from 'react-bootstrap';
+import { Modal, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useMergedState from 'utils/useMergedState';
 import useXaman from 'utils/useXaman';
@@ -62,13 +62,20 @@ function Banner() {
                         >
                             {cdnData.scanUsingXaman}
                         </Modal.Title>
-                        <img
-                            src={xamanState.img}
-                            alt="qrcode"
-                            style={{
-                                padding: '20px',
-                            }}
-                        />
+                        {xamanState.img ? (
+                            <img
+                                src={xamanState.img}
+                                alt="qrcode"
+                                className="p-3"
+                            />
+                        ) : (
+                            <div className="p-4">
+                                <Spinner
+                                    animation="border"
+                                    variant="primary"
+                                />
+                            </div>
+                        )}
                     </Modal.Body>
                 </Modal>
             </div>

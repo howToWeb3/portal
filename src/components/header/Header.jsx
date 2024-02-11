@@ -2,7 +2,7 @@ import logo from 'assets/images/logo/logo-long.png';
 import { PATHS, XAMAN_INITIAL_STATE } from 'constants/common';
 import { useAppContext } from 'context/App.context';
 import React, { useEffect, useState } from 'react';
-import { Modal } from 'react-bootstrap';
+import { Modal, Spinner } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import useMergedState from 'utils/useMergedState';
 import useXaman from 'utils/useXaman';
@@ -86,11 +86,22 @@ const Header = () => {
                         >
                             Scan using XAMAN
                         </Modal.Title>
-                        <img
-                            src={xamanState.img}
-                            alt="qrcode"
-                            className="p-3"
-                        />
+                        {xamanState.img ? (
+                            <img
+                                src={xamanState.img}
+                                alt="qrcode"
+                                className="p-3"
+                                width={200}
+                                height={200}
+                            />
+                        ) : (
+                            <div className="p-4">
+                                <Spinner
+                                    animation="border"
+                                    variant="primary"
+                                />
+                            </div>
+                        )}
                     </Modal.Body>
                 </Modal>
             </div>

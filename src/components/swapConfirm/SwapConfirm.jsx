@@ -1,7 +1,7 @@
 import { XAMAN_INITIAL_STATE } from 'constants/common';
 import { useAppContext } from 'context/App.context';
 import { enqueueSnackbar } from 'notistack';
-import { Image, Modal } from 'react-bootstrap';
+import { Image, Modal, Spinner } from 'react-bootstrap';
 import { validateFields } from 'utils/swap-tokens.utils';
 import useMergedState from 'utils/useMergedState';
 import useXaman from 'utils/useXaman';
@@ -44,7 +44,7 @@ export default function SwapConfirm({
             if (isValid) {
                 const payload = {
                     method: 'POST',
-                    url: 'user/xaman/qr-generate',
+                    url: 'xaman/qr-generate',
                     encrypt: false,
                     auth: false,
                     data: {
@@ -105,12 +105,21 @@ export default function SwapConfirm({
                         Scan using XAMAN
                     </Modal.Title>
                     <div className="d-flex align-items-center justify-content-between flex-column p-2">
-                        <Image
-                            src={state.img}
-                            alt="token"
-                            width="200"
-                            height="200"
-                        />
+                        {state.loading ? (
+                            <div className="p-4">
+                                <Spinner
+                                    animation="border"
+                                    variant="primary"
+                                />
+                            </div>
+                        ) : (
+                            <Image
+                                src={state.img}
+                                alt="token"
+                                width="200"
+                                height="200"
+                            />
+                        )}
                     </div>
                 </Modal.Body>
             </Modal>
