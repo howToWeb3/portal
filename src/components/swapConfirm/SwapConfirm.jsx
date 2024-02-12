@@ -1,7 +1,7 @@
+import XamanScanModal from 'components/xamanScanModal/XamanScanModal';
 import { XAMAN_INITIAL_STATE } from 'constants/common';
 import { useAppContext } from 'context/App.context';
 import { enqueueSnackbar } from 'notistack';
-import { Image, Modal, Spinner } from 'react-bootstrap';
 import { validateFields } from 'utils/swap-tokens.utils';
 import useMergedState from 'utils/useMergedState';
 import useXaman from 'utils/useXaman';
@@ -88,41 +88,18 @@ export default function SwapConfirm({
 
     return (
         <>
-            <Modal
+            <XamanScanModal
                 show={state.openModal}
                 onHide={onModalClose}
-                centered
-            >
-                <Modal.Body>
-                    <Modal.Title
-                        style={{
-                            background: 'var(--primary-color)',
-                            borderRadius: '20px',
-                            fontSize: '30px',
-                            padding: '15px',
-                        }}
-                    >
-                        Scan using XAMAN
-                    </Modal.Title>
-                    <div className="d-flex align-items-center justify-content-between flex-column p-2">
-                        {state.loading ? (
-                            <div className="p-4">
-                                <Spinner
-                                    animation="border"
-                                    variant="primary"
-                                />
-                            </div>
-                        ) : (
-                            <Image
-                                src={state.img}
-                                alt="token"
-                                width="200"
-                                height="200"
-                            />
-                        )}
-                    </div>
-                </Modal.Body>
-            </Modal>
+                heading="Scan QR"
+                img={state.img}
+                instructions={[
+                    'Open Xaman Wallet',
+                    'Click the middle icon at the bottom',
+                    'Scan the QR code',
+                    'Approve the Sign In transaction',
+                ]}
+            />
             <div className="d-flex justify-content-center mt-4">
                 <button
                     className="btn btn-primary btn-lg "

@@ -1,4 +1,5 @@
 import logo from 'assets/images/logo/logo.png';
+import XamanScanModal from 'components/xamanScanModal/XamanScanModal';
 import { LINKS, XAMAN_INITIAL_STATE } from 'constants/common';
 import { useAppContext } from 'context/App.context';
 import React, { useEffect, useState } from 'react';
@@ -45,39 +46,18 @@ function Banner() {
     return (
         <section className="banner">
             <div className="banner-modal">
-                <Modal
+                <XamanScanModal
                     show={xamanState.openModal}
-                    keyboard={false}
                     onHide={onModalClose}
-                    centered
-                >
-                    <Modal.Body style={{ textAlign: 'center' }}>
-                        <Modal.Title
-                            style={{
-                                background: 'var(--primary-color)',
-                                borderRadius: '20px',
-                                fontSize: '30px',
-                                padding: '15px',
-                            }}
-                        >
-                            {cdnData.scanUsingXaman}
-                        </Modal.Title>
-                        {xamanState.img ? (
-                            <img
-                                src={xamanState.img}
-                                alt="qrcode"
-                                className="p-3"
-                            />
-                        ) : (
-                            <div className="p-4">
-                                <Spinner
-                                    animation="border"
-                                    variant="primary"
-                                />
-                            </div>
-                        )}
-                    </Modal.Body>
-                </Modal>
+                    heading="Scan QR"
+                    img={xamanState.img}
+                    instructions={[
+                        'Open Xaman Wallet',
+                        'Click the middle icon at the bottom',
+                        'Scan the QR code',
+                        'Approve the Sign In transaction',
+                    ]}
+                />
             </div>
             <div className="shape right"></div>
             {cdnData.heading && (

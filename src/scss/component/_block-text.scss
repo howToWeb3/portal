@@ -14,7 +14,7 @@
         border-radius: 100px;
         display: inline-block;
         span {
-            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%), #ffffff;
+            background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%), #ffffff;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;

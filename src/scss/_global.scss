@@ -30,7 +30,10 @@ body {
 }
 
 :root {
-    --primary-color: #0af;
+    --primary-color: #E10600;
+    --primary-bg-shade: #E1060033;
+    --electric-blue: #7DF9FF;
+    --electric-green: #72FF13;
 }
 
 ul,
@@ -617,7 +620,7 @@ body[data-magic-cursor='hide'] .mouse-cursor {
     top: -70%;
     left: -60%;
     z-index: -1;
-    background: radial-gradient(34.98% 34.98% at 50% 50%, #0af 0%, rgba(6, 19, 45, 0) 100%)
+    background: radial-gradient(34.98% 34.98% at 50% 50%, var(--primary-bg-shade) 0%, rgba(6, 19, 45, 0) 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
     ;
     opacity: 0.5;
@@ -813,4 +816,30 @@ a {
 
 .home-1 {
     overflow: hidden;
+}
+
+.custom-modal-body {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 50% auto;
+    justify-content: center;
+    padding: 10px 40px;
+
+    .modal-title {
+        border-radius: 20px;
+        font-size: 30px;
+    }
+
+    .img-container {
+        align-self: center;
+        min-width: 250px;
+        display: flex;
+        justify-content: center;
+
+        img {
+            border-radius: 20px;
+            width: 230px;
+            height: 230px;
+        }
+    }
 }

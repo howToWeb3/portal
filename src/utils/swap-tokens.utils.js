@@ -22,7 +22,6 @@ export function calculatePrice({ orderbook, currency1, currency2, isReversed }) 
         }
 
         if (typeof bestOrder.TakerGets === 'string' && currency2.currency === 'XRP') return 1 / exchangeRate;
-
         return exchangeRate;
     }
 

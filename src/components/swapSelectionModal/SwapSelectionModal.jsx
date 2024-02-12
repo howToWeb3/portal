@@ -38,6 +38,7 @@ export default function SwapSelectionModal({ showModal, handleClick, userTrustli
         <Modal
             show={showModal}
             onHide={onClose}
+            dialogClassName="swap-selection-modal"
             centered
         >
             <Modal.Body>

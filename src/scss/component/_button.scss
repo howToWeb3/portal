@@ -20,10 +20,10 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
 
     span {
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
+        background: #242424;
+        color: white;
         padding: 10px 20px;
         border-radius: 10px;
-        color: #fff;
 
         transition: all 0.3s ease-in-out;
         position: relative;
@@ -86,7 +86,7 @@
     -o-border-radius: 50%;
     cursor: pointer;
     overflow: hidden;
-    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
+    background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
 
     @include flex(center, center);
 

@@ -1,4 +1,5 @@
 import logo from 'assets/images/logo/logo-long.png';
+import XamanScanModal from 'components/xamanScanModal/XamanScanModal';
 import { PATHS, XAMAN_INITIAL_STATE } from 'constants/common';
 import { useAppContext } from 'context/App.context';
 import React, { useEffect, useState } from 'react';
@@ -69,41 +70,60 @@ const Header = () => {
             `}
         >
             <div className="banner-modal">
-                <Modal
+                {/* <Modal
                     show={xamanState.openModal}
                     keyboard={false}
                     onHide={onModalClose}
                     centered
                 >
-                    <Modal.Body style={{ textAlign: 'center' }}>
-                        <Modal.Title
-                            style={{
-                                background: 'var(--primary-color)',
-                                borderRadius: '20px',
-                                fontSize: '30px',
-                                padding: '15px',
-                            }}
-                        >
-                            Scan using XAMAN
-                        </Modal.Title>
-                        {xamanState.img ? (
-                            <img
-                                src={xamanState.img}
-                                alt="qrcode"
-                                className="p-3"
-                                width={200}
-                                height={200}
-                            />
-                        ) : (
-                            <div className="p-4">
-                                <Spinner
-                                    animation="border"
-                                    variant="primary"
+                    <Modal.Body className="custom-modal-body">
+                        <div className="text-start p-3">
+                            <Modal.Title className="fs-2 pb-2">Scan QR</Modal.Title>
+                            <ul className="list-group list-group-numbered">
+                                <li className="list-group-item ps-0 bg-transparent text-white border-0">
+                                    Open Xaman Wallet
+                                </li>
+                                <li className="list-group-item ps-0 bg-transparent text-white border-0">
+                                    Click the middle icon at the bottom
+                                </li>
+                                <li className="list-group-item ps-0 bg-transparent text-white border-0">
+                                    Scan the QR code
+                                </li>
+                                <li className="list-group-item ps-0 bg-transparent text-white border-0">
+                                    Approve the Sign In transaction
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="img-container">
+                            {xamanState.img ? (
+                                <img
+                                    src={xamanState.img}
+                                    alt="qrcode"
+                                    className="p-3"
                                 />
-                            </div>
-                        )}
+                            ) : (
+                                <div className="p-4">
+                                    <Spinner
+                                        animation="border"
+                                        variant="primary"
+                                    />
+                                </div>
+                            )}
+                        </div>
                     </Modal.Body>
-                </Modal>
+                </Modal> */}
+                <XamanScanModal
+                    show={xamanState.openModal}
+                    onHide={onModalClose}
+                    heading="Scan QR"
+                    img={xamanState.img}
+                    instructions={[
+                        'Open Xaman Wallet',
+                        'Click the middle icon at the bottom',
+                        'Scan the QR code',
+                        'Approve the Sign In transaction',
+                    ]}
+                />
             </div>
             <div className="container big">
                 <div className="row">

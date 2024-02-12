@@ -292,7 +292,7 @@
     border-radius: 15px;
 
     .icon {
-        background: linear-gradient(289.89deg, #c7d2ff -23.71%, #0af 96.09%);
+        background: linear-gradient(289.89deg, #c7d2ff -23.71%, var(--primary-color) 96.09%);
         backdrop-filter: blur(4px);
         width: 105px;
         height: 105px;
@@ -377,7 +377,7 @@
         top: -15px;
         left: 22px;
         padding: 6px 16px;
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%), #ffffff;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -718,7 +718,7 @@
             left: 46%;
             width: 19px;
             height: 19px;
-            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%), #ffffff;
+            background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%), #ffffff;
             border: 4px solid #1f223e;
             border-radius: 50%;
         }
@@ -751,7 +751,7 @@
         width: 11px;
         height: 11px;
         border-radius: 50%;
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%), #ffffff;
 
         &.bottom {
             top: auto;
@@ -862,7 +862,7 @@
         right: -37px;
         width: 11px;
         height: 11px;
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%), #ffffff;
 
         border-radius: 50%;
         animation: 2s pulse-anim infinite;
@@ -905,7 +905,7 @@
         top: -15px;
         left: 29px;
         padding: 6px 16px;
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%), #ffffff;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -926,7 +926,7 @@
             width: 60px;
             height: 4px;
 
-            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
+            background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
             border-radius: 1.2px;
             position: absolute;
             bottom: 0;
@@ -1008,7 +1008,7 @@
                             }
 
                             &:hover {
-                                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
+                                background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
 
                                 span::before {
                                     color: #fff;
@@ -1132,7 +1132,7 @@
             @include flex(center, center);
 
             &:hover {
-                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
+                background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
             }
         }
     }
@@ -1382,7 +1382,7 @@
             cursor: pointer;
 
             &.react-tabs__tab--selected {
-                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%), rgba(255, 255, 255, 0.1);
+                background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%), rgba(255, 255, 255, 0.1);
             }
 
             @include mobile {
@@ -1444,7 +1444,7 @@
 }
 
 .create__main {
-    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
+    background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
     border-radius: 26px;
     position: relative;
 
@@ -1497,7 +1497,7 @@
 }
 
 .couter__main {
-    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
+    background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
     border-radius: 26px;
     padding: 37px 43px;
     position: relative;
@@ -1677,7 +1677,7 @@
 
     .token__main {
         margin-top: 68px;
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
+        background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
         border-radius: 16px;
         padding: 31px;
     }
@@ -1786,7 +1786,7 @@
                 top: auto;
                 bottom: 0;
 
-                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
+                background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
                 border-radius: 1.2px;
             }
         }
@@ -2150,7 +2150,7 @@ section.touch {
         }
 
         .sc-button {
-            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
+            background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
             border-radius: 8px;
             padding: 8px 20px;
             color: #fff;
@@ -2270,7 +2270,7 @@ section.touch {
                     width: 60px;
                     height: 1px;
 
-                    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
+                    background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
                     border-radius: 1.2px;
                 }
             }
@@ -2387,7 +2387,7 @@ section.touch {
                             font-size: 14px;
 
                             &:hover {
-                                background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
+                                background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
                                 color: #fff;
                             }
                         }
@@ -2562,7 +2562,7 @@ section.touch {
                 color: #fff;
 
                 &:hover {
-                    background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
+                    background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
                 }
             }
         }
@@ -2690,7 +2690,7 @@ section.touch {
                         font-size: 12px;
 
                         &:hover {
-                            background: linear-gradient(264.28deg, #c7d2ff -38.2%, #0af 103.12%);
+                            background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
                         }
                     }
                 }
