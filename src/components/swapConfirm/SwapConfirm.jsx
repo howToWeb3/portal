@@ -69,6 +69,10 @@ export default function SwapConfirm({
                     delete payload.data.TakerGets.issuer;
                 }
 
+                if (contextState.xamanToken) {
+                    payload.data.XamanToken = contextState.xamanToken;
+                }
+
                 if (toTokenSelection.currency === 'XRP') {
                     payload.data.TakerPays = xrpToDrops(toTokenInput);
                     delete payload.data.TakerPays.issuer;

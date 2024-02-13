@@ -9,7 +9,7 @@ export const useAppContext = () => {
 };
 
 export const AppProvider = ({ children }) => {
-    const token = getDataFromLocalStrg('token');
+    const token = getDataFromLocalStrg('mb589_token');
 
     const [
         state,

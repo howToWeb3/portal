@@ -7,7 +7,7 @@ import { clearLocalStrg, getDataFromLocalStrg, saveInLocalStrg } from './common.
 export default function useXaman() {
     const autoLogin = async () => {
         try {
-            const { token } = getDataFromLocalStrg('token', import.meta.VITE_ENCRYPTION_KEY);
+            const { token } = getDataFromLocalStrg('mb589_token', import.meta.VITE_ENCRYPTION_KEY);
             if (!token) {
                 return false;
             }
@@ -93,10 +93,12 @@ export default function useXaman() {
                         setContextState({ address: '' });
                         resolve({ success: false, message: 'Please try again using XUMM' });
                     }
-
                     if (validateUuidResponse.token) {
-                        setContextState({ address: validateUuidResponse.address });
-                        saveInLocalStrg('token', validateUuidResponse);
+                        setContextState({
+                            address: validateUuidResponse.address,
+                            xamanToken: validateUuidResponse.xamanToken,
+                        });
+                        saveInLocalStrg('mb589_token', validateUuidResponse);
                         enqueueSnackbar('Success!', { variant: 'success' });
                         ws.close();
                         resolve({ success: true });

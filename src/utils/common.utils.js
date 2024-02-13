@@ -2,7 +2,7 @@ import { AES, enc } from 'crypto-js';
 import { convertHexToString } from 'xrpl';
 
 export const clearLocalStrg = () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem('mb589_token');
 };
 
 export const encryptJSON = data => {
