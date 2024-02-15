@@ -82,7 +82,6 @@ function ParticipantAssets(props) {
             </section>
 
             <section className="assets">
-                <div className="shape"></div>
                 <div className="container">
                     <div className="row">
                         <div className="col-12">

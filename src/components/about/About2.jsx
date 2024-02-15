@@ -15,8 +15,6 @@ function About2(props) {
     });
     return (
         <section className="about s2">
-            <div className="shape"></div>
-            <div className="shape right"></div>
             <div className="container">
                 <div className="row">
                     <div className="col-12">
@@ -24,7 +22,7 @@ function About2(props) {
                             <h6 className="sub-heading">
                                 <span>{dataBlock.subheading}</span>
                             </h6>
-                            <h3 className="heading pd">{dataBlock.heading}</h3>
+                            <h3 className="heading pd gray-heading">{dataBlock.heading}</h3>
                         </div>
 
                         <div

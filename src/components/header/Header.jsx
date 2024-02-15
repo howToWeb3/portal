@@ -1,9 +1,7 @@
-import logo from 'assets/images/logo/logo-long.png';
 import XamanScanModal from 'components/xamanScanModal/XamanScanModal';
-import { PATHS, XAMAN_INITIAL_STATE } from 'constants/common';
+import { LINKS, PATHS, XAMAN_INITIAL_STATE } from 'constants/common';
 import { useAppContext } from 'context/App.context';
 import React, { useEffect, useState } from 'react';
-import { Modal, Spinner } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import useMergedState from 'utils/useMergedState';
 import useXaman from 'utils/useXaman';
@@ -40,17 +38,8 @@ const Header = () => {
         setMenuActive,
     ] = useState(null);
 
-    const [
-        activeIndex,
-        setActiveIndex,
-    ] = useState(null);
-
     const handleMenuActive = () => {
         setMenuActive(!menuActive);
-    };
-
-    const handleDropdown = index => {
-        setActiveIndex(index);
     };
 
     const handleLogin = async () => {
@@ -64,54 +53,9 @@ const Header = () => {
     return (
         <header
             id="header_main"
-            className={`header $ {
-                scroll ? 'is-fixed' : ''
-            }
-            `}
+            className={`header is-fixed`}
         >
             <div className="banner-modal">
-                {/* <Modal
-                    show={xamanState.openModal}
-                    keyboard={false}
-                    onHide={onModalClose}
-                    centered
-                >
-                    <Modal.Body className="custom-modal-body">
-                        <div className="text-start p-3">
-                            <Modal.Title className="fs-2 pb-2">Scan QR</Modal.Title>
-                            <ul className="list-group list-group-numbered">
-                                <li className="list-group-item ps-0 bg-transparent text-white border-0">
-                                    Open Xaman Wallet
-                                </li>
-                                <li className="list-group-item ps-0 bg-transparent text-white border-0">
-                                    Click the middle icon at the bottom
-                                </li>
-                                <li className="list-group-item ps-0 bg-transparent text-white border-0">
-                                    Scan the QR code
-                                </li>
-                                <li className="list-group-item ps-0 bg-transparent text-white border-0">
-                                    Approve the Sign In transaction
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="img-container">
-                            {xamanState.img ? (
-                                <img
-                                    src={xamanState.img}
-                                    alt="qrcode"
-                                    className="p-3"
-                                />
-                            ) : (
-                                <div className="p-4">
-                                    <Spinner
-                                        animation="border"
-                                        variant="primary"
-                                    />
-                                </div>
-                            )}
-                        </div>
-                    </Modal.Body>
-                </Modal> */}
                 <XamanScanModal
                     show={xamanState.openModal}
                     onHide={onModalClose}
@@ -125,7 +69,7 @@ const Header = () => {
                     ]}
                 />
             </div>
-            <div className="container big">
+            <div className="container">
                 <div className="row">
                     <div className="col-12">
                         <div className="header__body">
@@ -133,7 +77,7 @@ const Header = () => {
                                 <Link to="/">
                                     <img
                                         id="site-logo"
-                                        src={logo}
+                                        src={`${LINKS.CDN}/images/png/logo/HWT_long_logo.png`}
                                         alt="logo"
                                     />
                                 </Link>
@@ -141,11 +85,7 @@ const Header = () => {
                             <div className="header__right">
                                 <nav
                                     id="main-nav"
-                                    className={`main-nav $ {
-                menuActive ? 'active' : ''
-            }
-
-            `}
+                                    className="main-nav"
                                 >
                                     <ul
                                         id="menu-primary-menu"
@@ -154,16 +94,7 @@ const Header = () => {
                                         {menus.map((data, idx) => (
                                             <li
                                                 key={idx}
-                                                onClick={() => handleDropdown(idx)}
-                                                className={`menu-item $ {
-                            data.namesub ? 'menu-item-has-children' : ''
-                        }
-
-                        $ {
-                            activeIndex===idx ? 'active' : ''
-                        }
-
-                        `}
+                                                className="menu-item"
                                             >
                                                 <Link to={data.links}> {data.name}</Link>
                                                 {data.namesub && (
@@ -183,11 +114,7 @@ const Header = () => {
                                     </ul>
                                 </nav>
                                 <div
-                                    className={`mobile-button $ {
-                menuActive ? 'active' : ''
-            }
-
-            `}
+                                    className={`mobile-button ${menuActive ? 'active' : ''}`}
                                     onClick={handleMenuActive}
                                 >
                                     <span></span>

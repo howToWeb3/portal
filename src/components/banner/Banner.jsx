@@ -59,17 +59,13 @@ function Banner() {
                     ]}
                 />
             </div>
-            <div className="shape right"></div>
             {cdnData.heading && (
                 <div className="container big">
-                    <div className="row">
+                    <div className="row bg-black text-white d-flex justify-content-center align-items-center">
                         <div className="col-xl-6 col-md-12">
                             <div className="banner__left">
                                 <div className="block-text">
-                                    <h2 className="heading">
-                                        {cdnData.heading}
-                                        <span className="s1 arlo_tm_animation_text_word">{cdnData.subHeading}</span>
-                                    </h2>
+                                    <h2 className="heading">{cdnData.heading}</h2>
                                     <p className="desc">{cdnData.desc}</p>
                                     {!contextState.address && (
                                         <Link
@@ -84,24 +80,6 @@ function Banner() {
                                             </span>
                                         </Link>
                                     )}
-                                </div>
-
-                                <div className="pay">
-                                    <h6>{cdnData.acceptText}</h6>
-
-                                    <div className="list">
-                                        <p>{cdnData.acceptSubText}</p>
-
-                                        <ul>
-                                            {cdnData.acceptList.map((x, i) => (
-                                                <li key={i}>
-                                                    <Link to="#">
-                                                        <span className="fs">{x}</span>
-                                                    </Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -38,7 +38,6 @@ function Footer(props) {
 
     return (
         <footer className="footer">
-            <div className="shape"></div>
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">

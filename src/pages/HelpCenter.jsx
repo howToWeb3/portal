@@ -13,7 +13,6 @@ function HelpCenter(props) {
             <FaqPage data={dataFaqs} />
 
             <section className="watch-video">
-                <div className="shape"></div>
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
@@ -58,7 +57,7 @@ function HelpCenter(props) {
                                                     >
                                                         <stop
                                                             offset="0.164688"
-                                                            stopColor="#c7d2ff"
+                                                            stopColor="black"
                                                         />
                                                         <stop
                                                             offset="0.855177"

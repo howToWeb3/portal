@@ -8,11 +8,11 @@ Button.propTypes = {
 };
 
 function Button(props) {
-    const { link, title } = props;
+    const { link, title, black } = props;
     return (
         <Link
             to={link}
-            className="action-btn"
+            className={`action-btn ${black ? 'b' : ''}`}
         >
             <span>{title}</span>
         </Link>

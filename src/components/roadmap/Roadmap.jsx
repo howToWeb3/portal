@@ -7,7 +7,7 @@ Roadmap.propTypes = {
     data: PropTypes.array,
 };
 
-function Roadmap(props) {
+function Roadmap() {
     const [
         data,
         setData,
@@ -31,7 +31,7 @@ function Roadmap(props) {
                 alt="bg-line"
                 className="img-line"
             />
-            <div className="shape"></div>
+
             <div className="container">
                 <div className="row">
                     <div className="col-12">
@@ -39,12 +39,12 @@ function Roadmap(props) {
                             <h6 className="sub-heading">
                                 <span>{data.subheading}</span>
                             </h6>
-                            <h3 className="heading pd">{data.heading}</h3>
+                            <h3 className="heading pd gray-heading">{data.heading}</h3>
                         </div>
                         <div
                             className="roadmap__main"
                             data-aos="fade-up"
-                            data-aos-duration="2000"
+                            data-aos-duration="1000"
                         >
                             {data.items.map(idx => (
                                 <div
@@ -66,6 +66,7 @@ function Roadmap(props) {
                             <Button
                                 title={data.fullRoadMapBtnText}
                                 link="/road-map"
+                                black={true}
                             />
                         </div>
                     </div>

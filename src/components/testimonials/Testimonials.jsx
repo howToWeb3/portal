@@ -38,7 +38,7 @@ function Testimonials() {
                                         <span>{data.heading}</span>
                                     </h6>
                                     <h3
-                                        className="heading wow"
+                                        className="heading wow gray-heading"
                                         data-splitting
                                     >
                                         {data.heading}

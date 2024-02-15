@@ -18,7 +18,6 @@ function Project2(props) {
     });
     return (
         <section className="project s2">
-            <div className="shape right"></div>
             <div className="container">
                 <div className="row">
                     <div className="col-12">

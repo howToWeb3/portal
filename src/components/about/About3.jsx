@@ -38,7 +38,6 @@ function About3(props) {
     ]);
     return (
         <section className="about s3">
-            <div className="shape"></div>
             <div className="container">
                 <div className="row">
                     <div className="col-xl-6 col-md-12">

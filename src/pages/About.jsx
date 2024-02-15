@@ -29,7 +29,7 @@ function About(props) {
                         <div className="col-12">
                             <div className="create__main">
                                 <div className="content">
-                                    <h4 className="heading">Create your NFT portfolio</h4>
+                                    <h4 className="heading gray">Create your NFT portfolio</h4>
                                     <p>Get udpated with news, tips & tricks</p>
                                     <Button
                                         title="Join Now"
@@ -38,7 +38,7 @@ function About(props) {
                                 </div>
                                 <img
                                     src={img}
-                                    alt="Cyfonii"
+                                    alt="alt"
                                 />
                             </div>
                         </div>

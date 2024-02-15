@@ -29,16 +29,20 @@ function Project(props) {
 
     return (
         <section className="project">
-            <div className="shape right"></div>
-            {data.heading && (
+            {data.title && (
                 <div className="container">
-                    <div className="row">
+                    <div
+                        className="row"
+                        data-aos="fade-down"
+                        data-aos-duration="800"
+                        data-aos-anchor-placement="top"
+                    >
                         <div className="col-12">
                             <div className="block-text center">
                                 <h6 className="sub-heading">
-                                    <span>{data.subheading}</span>
+                                    <span>{data.subtitle}</span>
                                 </h6>
-                                <h3 className="heading">{data.heading}</h3>
+                                <h3 className="heading gray-heading">{data.title}</h3>
                             </div>
 
                             <Swiper

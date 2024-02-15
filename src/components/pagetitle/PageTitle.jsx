@@ -7,7 +7,6 @@ function PageTitle(props) {
     const { title, breadcrumb, showSocials = false } = props;
     return (
         <section className="page-title">
-            <div className="shape"></div>
             <div className="shape right s3"></div>
             <div className="container">
                 <div className="row">

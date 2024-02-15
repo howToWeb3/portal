@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
-import Partner from '../partner/Partner';
 
 Team.propTypes = {
     data: PropTypes.array,
@@ -31,13 +30,18 @@ function Team() {
         <section className="team">
             {data.heading && (
                 <div className="container">
-                    <div className="row">
+                    <div
+                        className="row"
+                        data-aos="flip-up"
+                        data-aos-duration="800"
+                        // data-aos-anchor-placement="top"
+                    >
                         <div className="col-12">
                             <div className="block-text center">
                                 <h6 className="sub-heading">
                                     <span>{data.subheading}</span>
                                 </h6>
-                                <h3 className="heading pd">{data.heading}</h3>
+                                <h3 className="heading pd gray-heading">{data.heading}</h3>
                             </div>
 
                             <Swiper
@@ -136,7 +140,6 @@ function Team() {
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
-                            <Partner />
                         </div>
                     </div>
                 </div>

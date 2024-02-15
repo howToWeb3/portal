@@ -23,8 +23,6 @@ function Banner2(props) {
     });
     return (
         <section className="banner s2">
-            <div className="shape"></div>
-            <div className="shape right"></div>
             <div className="container">
                 <div className="row">
                     <div className="col-12">
@@ -32,7 +30,7 @@ function Banner2(props) {
                             <h6 className="sub-heading">
                                 <span>{dataBlock.subheading}</span>
                             </h6>
-                            <h2 className="heading pd">{dataBlock.heading}</h2>
+                            <h2 className="heading pd gray-heading">{dataBlock.heading}</h2>
                             <p className="mb-34">{dataBlock.desc}</p>
 
                             <Button

@@ -21,7 +21,6 @@ function Roadmap2(props) {
     });
     return (
         <section className="roadmap s2">
-            <div className="shape"></div>
             <div className="container">
                 <div className="row">
                     <div className="col-12">

@@ -1,17 +1,14 @@
-@use '../abstracts/' as *;
+@use '../abstracts/'as *;
 
 .action-btn {
     position: relative;
     overflow: hidden;
     font-weight: 700;
-    background: linear-gradient(
-        89.96deg,
-        rgba(255, 255, 255, 0.05) 0.03%,
-        rgba(255, 255, 255, 0.008) 49.67%,
-        rgba(255, 255, 255, 0.05) 99.96%
-    );
+    background: linear-gradient(89.96deg,
+            rgba(255, 255, 255, 0.05) 0.03%,
+            rgba(255, 255, 255, 0.008) 49.67%,
+            rgba(255, 255, 255, 0.05) 99.96%);
     backdrop-filter: blur(4px);
-    padding: 5px;
     border-radius: 10px;
     display: inline-flex;
     align-items: center;
@@ -20,23 +17,20 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
 
     span {
-        background: #242424;
-        color: white;
-        padding: 10px 20px;
+        color: var(--company-white);
+        padding: 2px 16px;
         border-radius: 10px;
-
+        backdrop-filter: saturate(180%) blur(20px);
         transition: all 0.3s ease-in-out;
         position: relative;
         overflow: hidden;
 
         &::after {
-            background: linear-gradient(
-                90deg,
-                rgba(255, 255, 255, 0.13) 0px,
-                rgba(255, 255, 255, 0.13) 77%,
-                rgba(255, 255, 255, 0.5) 92%,
-                rgba(255, 255, 255, 0)
-            );
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.13) 0px,
+                    rgba(255, 255, 255, 0.13) 77%,
+                    rgba(255, 255, 255, 0.5) 92%,
+                    rgba(255, 255, 255, 0));
             content: '';
             height: 200%;
             left: -210%;
@@ -68,6 +62,10 @@
     }
 }
 
+.action-btn.b {
+    background: var(--bs-black);
+}
+
 #scroll-top {
     position: fixed;
     display: block;
@@ -86,7 +84,7 @@
     -o-border-radius: 50%;
     cursor: pointer;
     overflow: hidden;
-    background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
+    background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%);
 
     @include flex(center, center);
 

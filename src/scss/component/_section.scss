@@ -292,7 +292,7 @@
     border-radius: 15px;
 
     .icon {
-        background: linear-gradient(289.89deg, #c7d2ff -23.71%, var(--primary-color) 96.09%);
+        background: linear-gradient(289.89deg, black -23.71%, var(--primary-color) 96.09%);
         backdrop-filter: blur(4px);
         width: 105px;
         height: 105px;
@@ -309,6 +309,7 @@
 
     .title {
         margin-bottom: 11px;
+        color: var(--company-gray);
     }
 
     p {
@@ -316,7 +317,9 @@
     }
 
     .number {
-        color: rgba(255, 255, 255, 0.1);
+        color: var(--company-white);
+        cursor: default;
+        -webkit-text-stroke: 1px black;
         transition: all 0.3s ease-in-out;
     }
 
@@ -326,13 +329,15 @@
         }
 
         .number {
-            color: rgba(255, 255, 255, 1);
+            color: var(--secondary-red);
         }
     }
 }
 
 .portfolio {
     position: relative;
+    background: black;
+    padding: 30px 0;
 
     .container {
         max-width: 1140px;
@@ -365,6 +370,7 @@
     padding: 40px 23px;
     display: flex;
     margin-bottom: 19px;
+    border: 1px solid #5c5c5c5c;
 
     .step {
         background: linear-gradient(89.96deg,
@@ -377,10 +383,10 @@
         top: -15px;
         left: 22px;
         padding: 6px 16px;
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%), #ffffff;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid #5c5c5c5c;
 
         font-weight: 600;
         font-size: 12px;
@@ -392,12 +398,17 @@
     }
 
     .content {
-        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
         padding-left: 16px;
 
         .title {
             margin-top: 4px;
             margin-bottom: 10px;
+            color: var(--company-white);
+        }
+
+        p {
+            color: var(--company-white);
         }
     }
 }
@@ -476,12 +487,12 @@
 .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--company-gray);
     opacity: 1;
     margin: 0 5px !important;
 
     &.swiper-pagination-bullet-active {
-        border: 3px solid #ffffff;
+        border: 3px solid var(--primary-color);
         background: transparent;
     }
 }
@@ -494,12 +505,12 @@
     .swiper-pagination-bullet {
         width: 10px;
         height: 10px;
-        background: rgba(255, 255, 255, 0.2);
+        background: var(--company-gray);
         opacity: 1;
         margin: 0 5px !important;
 
         &.swiper-pagination-bullet-active {
-            border: 3px solid #ffffff;
+            border: 3px solid var(--company-gray);
             background: transparent;
         }
     }
@@ -509,9 +520,10 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.1);
+        background: var(--company-gray);
         top: auto;
         bottom: -10px;
+        transition: all 0.3s ease;
 
         &::after {
             font-size: 16px;
@@ -521,7 +533,12 @@
         @include flex(center, center);
 
         &:hover {
-            background: #703ffe;
+            &::after {
+                color: var(--company-gray)
+            }
+
+            background: var(--company-light-gray);
+            border: 1px solid var(--company-gray);
         }
 
         @include desktop-1200 {
@@ -537,7 +554,7 @@
     .swiper-button-prev {
         left: 36%;
         z-index: 99;
-        background: #703ffe;
+        background: var(--company-gray);
     }
 }
 
@@ -581,7 +598,7 @@
 
     .swiper-button-prev {
         left: 10%;
-        background: #703ffe;
+        background: var(--company-gray);
 
         @include desktop-1600 {
             left: 5%;
@@ -690,15 +707,6 @@
         width: 100%;
         padding: 35px 17px;
 
-        .title {
-            padding-bottom: 11px;
-            margin-bottom: 19px;
-
-            &::after {
-                height: 1px;
-            }
-        }
-
         &::before {
             content: '';
             position: absolute;
@@ -718,7 +726,7 @@
             left: 46%;
             width: 19px;
             height: 19px;
-            background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%), #ffffff;
+            background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%), #ffffff;
             border: 4px solid #1f223e;
             border-radius: 50%;
         }
@@ -751,7 +759,7 @@
         width: 11px;
         height: 11px;
         border-radius: 50%;
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%), #ffffff;
 
         &.bottom {
             top: auto;
@@ -862,15 +870,30 @@
         right: -37px;
         width: 11px;
         height: 11px;
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%), #ffffff;
 
         border-radius: 50%;
         animation: 2s pulse-anim infinite;
     }
 
+    .content {
+        .title {
+            padding-bottom: 11px;
+            margin-bottom: 19px;
+            color: var(--company-gray);
+            line-height: 1.07143;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+
+            &::after {
+                height: 1px;
+            }
+        }
+    }
+
     @keyframes pulse-anim {
         0% {
-            box-shadow: #c7d2ff 0 0 0 0;
+            box-shadow: black 0 0 0 0;
         }
 
         100% {
@@ -905,10 +928,10 @@
         top: -15px;
         left: 29px;
         padding: 6px 16px;
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%), #ffffff;
+        background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%), #ffffff;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgb(162, 162, 162);
 
         font-weight: 600;
         font-size: 12px;
@@ -926,7 +949,7 @@
             width: 60px;
             height: 4px;
 
-            background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
+            background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%);
             border-radius: 1.2px;
             position: absolute;
             bottom: 0;
@@ -1008,7 +1031,7 @@
                             }
 
                             &:hover {
-                                background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
+                                background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%);
 
                                 span::before {
                                     color: #fff;
@@ -1096,8 +1119,8 @@
         text-align: center;
 
         .name {
-            letter-spacing: -1.5px;
             margin-bottom: 7px;
+            color: black;
         }
     }
 
@@ -1127,12 +1150,12 @@
             width: 38px;
             height: 38px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--company-gray);
 
             @include flex(center, center);
 
             &:hover {
-                background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
+                background: black;
             }
         }
     }
@@ -1248,6 +1271,7 @@
         .name {
             font-size: 18px;
             margin-bottom: 6px;
+            color: black;
         }
 
         p {
@@ -1376,13 +1400,18 @@
             border-radius: 6px;
             padding: 10px 16px;
             margin: 0 5px;
+            color: black;
 
             border: none;
             outline: none;
             cursor: pointer;
+            transition: background 0.3s ease-in-out;
 
+
+            &:hover,
             &.react-tabs__tab--selected {
-                background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%), rgba(255, 255, 255, 0.1);
+                background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%), rgba(255, 255, 255, 0.1);
+                color: var(--company-white);
             }
 
             @include mobile {
@@ -1394,20 +1423,23 @@
 
 .flat-accordion {
     .accordion-item {
-        background: linear-gradient(89.96deg,
-                rgba(255, 255, 255, 0.05) 0.03%,
-                rgba(255, 255, 255, 0.008) 49.67%,
-                rgba(255, 255, 255, 0.05) 99.96%);
         margin-bottom: 12px;
         padding: 10px;
+        border-radius: 20px;
+        background: transparent;
+        color: var(--company-gray);
+        transition: background 1.3s ease-in-out;
+        border: 1px solid var(--bs-border-color);
+
     }
 
     .accordion-button {
         background: transparent;
-        color: #fff;
+        color: var(--company-gray);
         border: none;
         box-shadow: none;
         outline: none;
+        padding: 0 20px;
 
         &::after {
             background-image: none;
@@ -1444,7 +1476,7 @@
 }
 
 .create__main {
-    background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
+    background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%);
     border-radius: 26px;
     position: relative;
 
@@ -1497,7 +1529,7 @@
 }
 
 .couter__main {
-    background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
+    background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%);
     border-radius: 26px;
     padding: 37px 43px;
     position: relative;
@@ -1677,7 +1709,7 @@
 
     .token__main {
         margin-top: 68px;
-        background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
+        background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%);
         border-radius: 16px;
         padding: 31px;
     }
@@ -1786,7 +1818,7 @@
                 top: auto;
                 bottom: 0;
 
-                background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
+                background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%);
                 border-radius: 1.2px;
             }
         }
@@ -2150,7 +2182,7 @@ section.touch {
         }
 
         .sc-button {
-            background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
+            background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%);
             border-radius: 8px;
             padding: 8px 20px;
             color: #fff;
@@ -2270,7 +2302,7 @@ section.touch {
                     width: 60px;
                     height: 1px;
 
-                    background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
+                    background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%);
                     border-radius: 1.2px;
                 }
             }
@@ -2387,7 +2419,7 @@ section.touch {
                             font-size: 14px;
 
                             &:hover {
-                                background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
+                                background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%);
                                 color: #fff;
                             }
                         }
@@ -2562,7 +2594,7 @@ section.touch {
                 color: #fff;
 
                 &:hover {
-                    background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
+                    background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%);
                 }
             }
         }
@@ -2690,7 +2722,7 @@ section.touch {
                         font-size: 12px;
 
                         &:hover {
-                            background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
+                            background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%);
                         }
                     }
                 }

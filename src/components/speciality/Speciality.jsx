@@ -19,16 +19,20 @@ function Speciality() {
 
     return (
         <section className="speciality">
-            <div className="shape right"></div>
             {data.heading && (
                 <div className="container">
-                    <div className="row">
+                    <div
+                        className="row"
+                        data-aos="fade-down"
+                        data-aos-duration="800"
+                        data-aos-anchor-placement="center"
+                    >
                         <div className="col-12">
                             <div className="block-text center">
                                 <h6 className="sub-heading">
                                     <span>{data.subheading}</span>
                                 </h6>
-                                <h3 className="heading pd">{data.heading}</h3>
+                                <h3 className="heading pd gray-heading">{data.heading}</h3>
                                 <p className="">{data.desc}</p>
                             </div>
                         </div>

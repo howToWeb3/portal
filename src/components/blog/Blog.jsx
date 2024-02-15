@@ -17,7 +17,6 @@ function Blog(props) {
     });
     return (
         <section className="blog s2">
-            <div className="shape right"></div>
             <div className="container">
                 <div className="row">
                     <div className="col-12">
@@ -25,7 +24,7 @@ function Blog(props) {
                             <h6 className="sub-heading">
                                 <span>{dataBlock.subheading}</span>
                             </h6>
-                            <h3 className="heading pd">{dataBlock.heading} </h3>
+                            <h3 className="heading pd gray-heading">{dataBlock.heading} </h3>
                         </div>
                     </div>
 

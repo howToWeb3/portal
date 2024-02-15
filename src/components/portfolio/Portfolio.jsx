@@ -24,10 +24,14 @@ function Portfolio(props) {
 
     return (
         <section className="portfolio">
-            <div className="shape"></div>
             {data.heading && (
                 <div className="container">
-                    <div className="row">
+                    <div
+                        className="row"
+                        data-aos="fade"
+                        data-aos-duration="800"
+                        data-aos-anchor-placement="top"
+                    >
                         <div className="col-12">
                             <div className="block-text center">
                                 <h6 className="sub-heading">

@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 function Banner3(props) {
     return (
         <section className="banner s3">
-            <div className="shape"></div>
-            <div className="shape right"></div>
             <div className="shape s3 right"></div>
 
             <div className="container big">

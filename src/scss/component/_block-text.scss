@@ -1,20 +1,18 @@
-@use '../abstracts/' as *;
+@use '../abstracts/'as *;
 
 .block-text {
     .sub-heading {
         padding: 7px 14px;
-        background: linear-gradient(
-            89.96deg,
-            rgba(255, 255, 255, 0.05) 0.03%,
-            rgba(255, 255, 255, 0.008) 49.67%,
-            rgba(255, 255, 255, 0.05) 99.96%
-        );
+        background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%), #ffffff;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border: 1px solid rgba(92, 92, 92, 0.3607843137);
         backdrop-filter: blur(4px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 100px;
         display: inline-block;
+
+
         span {
-            background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%), #ffffff;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -22,9 +20,22 @@
 
         margin-bottom: 22px;
     }
+
     .heading {
         margin-bottom: 25px;
+        color: var(--company-white);
+        line-height: 1.07143;
+        font-weight: 600;
+        letter-spacing: -.005em;
         text-transform: none;
+    }
+
+    .gray-heading {
+        color: var(--company-gray);
+    }
+
+    .light-heading {
+        color: var(--company-light-gray);
     }
 
     .action-btn {

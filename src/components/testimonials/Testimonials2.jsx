@@ -17,11 +17,11 @@ function Testimonials2(props) {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="testimonials__main">
-                            <div className="block-text center">
+                            <div className="block-text center content">
                                 <h6 className="sub-heading">
                                     <span>Testimonials</span>
                                 </h6>
-                                <h3 className="heading">
+                                <h3 className="heading gray-heading">
                                     What People Say <br />
                                     about us
                                 </h3>

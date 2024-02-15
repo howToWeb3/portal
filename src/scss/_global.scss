@@ -18,22 +18,27 @@
 }
 
 body {
-    font-family: 'Readex Pro', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 1.4;
     color: $text-color;
-    background: #1a1a1d;
+    color: #1a1a1d;
     position: relative;
     overflow-x: hidden;
-    color: #ffffff;
+    background: #ffffff;
 }
 
 :root {
     --primary-color: #E10600;
-    --primary-bg-shade: #E1060033;
+    --primary-bg-shade: #ad0803ae;
     --electric-blue: #7DF9FF;
     --electric-green: #72FF13;
+    --secondary-red: #ff3b3b;
+    --company-gray: rgba(22, 22, 23, .8);
+    --company-medium-gray: #6e6e73;
+    --company-light-gray: #ffffffcc;
+    --company-white: #f5f5f7;
 }
 
 ul,
@@ -49,14 +54,13 @@ p {
 
 a,
 button {
-    font-family: 'Conthrax', sans-serif;
     font-size: 15px;
     text-decoration: none;
     color: unset;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
     display: inline-block;
-    color: $white;
+    color: black;
 
     &:hover {
         transition: all 0.3s;
@@ -80,10 +84,9 @@ h5,
 .h5,
 h6,
 .h6 {
-    font-family: 'Conthrax', sans-serif;
     font-weight: 700;
     line-height: 1.2;
-    color: $white;
+    color: var(--company-white);
     margin-bottom: 0;
 }
 

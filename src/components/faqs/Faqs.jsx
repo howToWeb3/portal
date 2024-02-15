@@ -25,20 +25,20 @@ function Faqs() {
 
     return (
         <section className="faq">
-            <div className="shape right"></div>
             {data.heading && (
                 <div className="container">
-                    <div className="row">
+                    <div
+                        className="row"
+                        data-aos="fade-down"
+                        data-aos-duration="800"
+                        data-aos-anchor-placement="top"
+                    >
                         <div className="col-12">
-                            <div
-                                className="block-text center"
-                                data-aos="fade-down"
-                                data-aos-duration="3000"
-                            >
+                            <div className="block-text center">
                                 <h6 className="sub-heading">
                                     <span>{data.subheading}</span>
                                 </h6>
-                                <h3 className="heading">{data.heading}</h3>
+                                <h3 className="heading gray-heading">{data.heading}</h3>
                                 <p className="mb-17">{data.desc1}</p>
                                 <p>{data.desc2}</p>
                             </div>

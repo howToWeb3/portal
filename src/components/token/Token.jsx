@@ -11,7 +11,6 @@ function Token(props) {
     });
     return (
         <section className="token">
-            <div className="shape"></div>
             <div className="container">
                 <div className="row">
                     <div className="col-xl-6 col-md-12">

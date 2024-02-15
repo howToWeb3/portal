@@ -11,7 +11,6 @@ function Team2(props) {
     const { data } = props;
     return (
         <section className="team s2">
-            <div className="shape right"></div>
             <img
                 src={line}
                 alt=""

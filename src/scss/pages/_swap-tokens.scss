@@ -48,15 +48,15 @@
         background-color: transparent !important;
         border: 1px solid white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-        color: white;
+        color: var(--company-white);
 
         &::placeholder {
-            color: white;
+            color: var(--company-white);
             font-style: italic;
         }
 
         &:focus {
-            color: white;
+            color: var(--company-white);
             border-color: var(--primary-color);
             box-shadow: 0 0 2px var(--primary-color);
         }

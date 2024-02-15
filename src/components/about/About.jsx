@@ -19,9 +19,13 @@ function About(props) {
 
     return (
         <section className="about">
-            <div className="shape"></div>
             {data.blockText && (
-                <div className="container">
+                <div
+                    className="container"
+                    data-aos="fade-down"
+                    data-aos-duration="800"
+                    data-aos-anchor-placement="top-bottom"
+                >
                     <div className="row rev">
                         <div className="col-xl-6 col-md-12">
                             <div className="about__right">
@@ -42,12 +46,13 @@ function About(props) {
                                 <h6 className="sub-heading">
                                     <span>{data.blockText.subheading}</span>
                                 </h6>
-                                <h3 className="heading">{data.blockText.heading}</h3>
+                                <h3 className="heading gray-heading">{data.blockText.heading}</h3>
                                 <p className="mb-17">{data.blockText.desc1}</p>
                                 <p className="mb-26">{data.blockText.desc2}</p>
                                 <Button
                                     link="/about"
                                     title="More About Us"
+                                    black={true}
                                 />
                             </div>
                         </div>

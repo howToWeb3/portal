@@ -1,9 +1,12 @@
-@use '../abstracts/' as *;
+@use '../abstracts/'as *;
+
 .footer {
     position: relative;
+
     .block-text .heading {
         margin-bottom: 16px;
     }
+
     .footer__bottom {
         display: flex;
         justify-content: space-between;
@@ -24,6 +27,7 @@
             margin-bottom: 16px;
 
             margin-left: 22px;
+
             li {
                 margin: 0 16px;
 
@@ -44,6 +48,7 @@
                 &:last-child {
                     margin-right: 0;
                 }
+
                 a {
                     min-width: 38px;
                     width: 38px;
@@ -54,7 +59,7 @@
                     @include flex(center, center);
 
                     &:hover {
-                        background: linear-gradient(264.28deg, #c7d2ff -38.2%, var(--primary-color) 103.12%);
+                        background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%);
                     }
                 }
             }
@@ -84,13 +89,14 @@
 .form {
     text-align: center;
     margin-top: 39px;
+
     .form-control {
         max-width: 540px;
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(2px);
         border-radius: 10px;
         margin: 0 auto;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgb(162, 162, 162);
         font-weight: 300;
         font-size: 14px;
         color: #fff;
@@ -104,6 +110,7 @@
 
     button {
         margin-top: 14px;
+
         span {
             padding: 15px 40px;
         }
@@ -112,6 +119,7 @@
 
 .footer.s1 {
     padding: 0 0 20px;
+
     .footer__bottom {
         padding: 25px 0;
     }
@@ -126,6 +134,7 @@
 
 .footer.style-2 {
     padding-bottom: 30px;
+
     .footer__main {
         display: flex;
 
@@ -177,6 +186,7 @@
                 justify-content: space-between;
                 align-items: center;
                 margin-top: 51px;
+
                 p {
                     font-weight: 300;
                     font-size: 12px;
@@ -189,6 +199,7 @@
 
                     li {
                         margin-left: 41px;
+
                         a {
                             font-family: 'Readex Pro';
                             font-weight: 300;
