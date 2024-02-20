@@ -21,58 +21,58 @@ const menus = [
         //     },
         // ],
     },
-    {
-        id: 2,
-        name: 'Explore',
-        links: '#',
-        namesub: [
-            {
-                id: 1,
-                sub: 'Swap',
-                links: '/swap',
-            },
-            {
-                id: 2,
-                sub: 'NFTs',
-                links: '/nfts',
-            },
-            {
-                id: 3,
-                sub: 'Blog List',
-                links: '/blog',
-            },
-            {
-                id: 4,
-                sub: 'Blog Details',
-                links: '/blog-details',
-            },
-            {
-                id: 5,
-                sub: 'Visions & Mission',
-                links: '/visions-mission',
-            },
-            {
-                id: 6,
-                sub: 'Help Center',
-                links: '/help-center',
-            },
-            {
-                id: 7,
-                sub: 'Participants & Assets',
-                links: '/participants-assets',
-            },
-            {
-                id: 8,
-                sub: 'Advisors & Backers',
-                links: '/advisors-backers',
-            },
-            {
-                id: 9,
-                sub: 'Partners & Investors',
-                links: '/partners',
-            },
-        ],
-    },
+    // {
+    //     id: 2,
+    //     name: 'Explore',
+    //     links: '#',
+    //     namesub: [
+    //         {
+    //             id: 1,
+    //             sub: 'Swap',
+    //             links: '/swap',
+    //         },
+    //         {
+    //             id: 2,
+    //             sub: 'NFTs',
+    //             links: '/nfts',
+    //         },
+    //         {
+    //             id: 3,
+    //             sub: 'Blog List',
+    //             links: '/blog',
+    //         },
+    //         {
+    //             id: 4,
+    //             sub: 'Blog Details',
+    //             links: '/blog-details',
+    //         },
+    //         {
+    //             id: 5,
+    //             sub: 'Visions & Mission',
+    //             links: '/visions-mission',
+    //         },
+    //         {
+    //             id: 6,
+    //             sub: 'Help Center',
+    //             links: '/help-center',
+    //         },
+    //         {
+    //             id: 7,
+    //             sub: 'Participants & Assets',
+    //             links: '/participants-assets',
+    //         },
+    //         {
+    //             id: 8,
+    //             sub: 'Advisors & Backers',
+    //             links: '/advisors-backers',
+    //         },
+    //         {
+    //             id: 9,
+    //             sub: 'Partners & Investors',
+    //             links: '/partners',
+    //         },
+    //     ],
+    // },
     {
         id: 4,
         name: 'About',

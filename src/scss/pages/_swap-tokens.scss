@@ -1,7 +1,8 @@
 @use '../abstracts/'as *;
 
 .page-swap {
-    min-height: 100vh;
+    color: black;
+    background-color: var(--company-white);
 
     // mobile 
     @include mobile {
@@ -26,13 +27,44 @@
         }
     }
 
+    .selection-flex:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .custom-container {
+        margin: 1% 15%;
+
+        .swap-title {
+            color: black;
+            margin-bottom: 5px;
+            font-size: 50px;
+            font-size: 35px;
+            font-weight: 400;
+            letter-spacing: 0.004em;
+            line-height: 1.125;
+        }
+
+        .swap-subtitle {
+            color: black;
+            font-size: 16px;
+            font-weight: 200;
+            margin-bottom: 40px;
+        }
+
+        .swap-description {
+            color: black;
+            font-size: 16px;
+            text-align: justify;
+            margin-top: 20px;
+        }
+    }
+
 
     .selection-btn {
+        border: 1px solid black;
+        // border-left: none;
         border-radius: 0px 10px 10px 0;
-        -webkit-border-radius: 0px 10px 10px 0;
-        -moz-border-radius: 0px 10px 10px 0;
-        -ms-border-radius: 0px 10px 10px 0;
-        -o-border-radius: 0px 10px 10px 0;
+        background: var(--company-white);
 
         @include mobile {
             border-radius: 10px;
@@ -41,25 +73,28 @@
 
     .selection-input {
         border-radius: 10px 0px 0px 10px;
-        -webkit-border-radius: 10px 0px 0px 10px;
-        -moz-border-radius: 10px 0px 0px 10px;
-        -ms-border-radius: 10px 0px 0px 10px;
-        -o-border-radius: 10px 0px 0px 10px;
         background-color: transparent !important;
-        border: 1px solid white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-        color: var(--company-white);
+        border: 1px solid black;
+        border-right: none;
+        color: black;
 
         &::placeholder {
-            color: var(--company-white);
-            font-style: italic;
+            color: black;
+            font-size: 16px;
         }
 
         &:focus {
-            color: var(--company-white);
+            color: black;
             border-color: var(--primary-color);
             box-shadow: 0 0 2px var(--primary-color);
         }
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: black;
     }
 
     .cursor-not-allowed {
@@ -69,12 +104,13 @@
     .customeSwapIcon {
         padding: 13px;
         border-radius: 100%;
-        border: 1px solid #ffffff47;
+        border: 1px solid black;
         cursor: pointer;
+        color: black;
         transition: all 0.3s ease;
 
         &:hover {
-            border: 1px solid #ffffff;
+            border: 1px solid black;
         }
 
         &.rotate {

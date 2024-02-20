@@ -292,7 +292,7 @@
     border-radius: 15px;
 
     .icon {
-        background: linear-gradient(289.89deg, black -23.71%, var(--primary-color) 96.09%);
+        background: black;
         backdrop-filter: blur(4px);
         width: 105px;
         height: 105px;
@@ -1405,13 +1405,12 @@
             border: none;
             outline: none;
             cursor: pointer;
-            transition: background 0.3s ease-in-out;
-
 
             &:hover,
             &.react-tabs__tab--selected {
-                background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%), rgba(255, 255, 255, 0.1);
+                background: black;
                 color: var(--company-white);
+                border-radius: 20px;
             }
 
             @include mobile {

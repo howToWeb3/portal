@@ -99,7 +99,7 @@ function Footer2(props) {
                                 <div className="top">
                                     <ul className="widget">
                                         <li>
-                                            <h5 className="title">Quick link</h5>
+                                            <h5 className="title text-black">Quick link</h5>
                                         </li>
                                         <li>
                                             <Link to="/nfts">NFT Trading</Link>
@@ -116,7 +116,7 @@ function Footer2(props) {
                                     </ul>
                                     <ul className="widget">
                                         <li>
-                                            <h5 className="title">Help</h5>
+                                            <h5 className="title text-black">Help</h5>
                                         </li>
                                         <li>
                                             <Link to="/about">About Us</Link>
@@ -133,7 +133,7 @@ function Footer2(props) {
                                     </ul>
 
                                     <div className="widget">
-                                        <h5 className="title">Newsletter</h5>
+                                        <h5 className="title text-black">Newsletter</h5>
 
                                         <form
                                             action="#"
@@ -143,7 +143,7 @@ function Footer2(props) {
                                             <div className="form-group">
                                                 <input
                                                     type="email"
-                                                    className="form-control"
+                                                    className="form-control text-black"
                                                     placeholder="Your email"
                                                 />
                                                 <button className="">
@@ -169,7 +169,7 @@ function Footer2(props) {
                                 </div>
 
                                 <div className="bottom">
-                                    <p>Copyright © 2022, Cyfonii. Designed by Themesflat</p>
+                                    <p className="text-black">Copyright © 2024, How to Web3.</p>
                                     <ul className="list">
                                         <li>
                                             <Link to="#">Terms & Condition</Link>

@@ -123,7 +123,7 @@ const Header = () => {
                             <div className="header__action">
                                 {contextState.address ? (
                                     <Link
-                                        className="address-btn"
+                                        className="action-btn"
                                         to={PATHS.ACCOUNT_DETAILS}
                                     >
                                         <span>{contextState.address}</span>

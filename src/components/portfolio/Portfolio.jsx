@@ -34,7 +34,7 @@ function Portfolio(props) {
                     >
                         <div className="col-12">
                             <div className="block-text center">
-                                <h6 className="sub-heading">
+                                <h6 className="sub-heading white">
                                     <span>{data.subheading}</span>
                                 </h6>
                                 <h3 className="heading pd">{data.heading}</h3>

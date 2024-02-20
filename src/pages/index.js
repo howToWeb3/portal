@@ -13,7 +13,6 @@ import Nfts from './Nfts';
 import ParticipantAssets from './ParticipantAssets';
 import Partners from './Partners';
 import RoadMap from './RoadMap';
-import SwapTokens from './SwapTokens';
 import Team from './Team';
 import VisionsMission from './VisionsMission';
 
@@ -34,7 +33,6 @@ const routes = [
     { path: PATHS.TEAM, component: <Team /> },
     { path: PATHS.CONTACT, component: <Contact /> },
     { path: PATHS.ACCOUNT_DETAILS, component: <AccountDetails /> },
-    { path: PATHS.SWAP_TOKEN, component: <SwapTokens /> },
 ];
 
 export default routes;

@@ -374,19 +374,8 @@
     .header__action {
         display: flex;
         align-items: center;
+        gap: 25px;
 
-        // .address-btn {
-        //     font-size: 12px;
-
-        //     span {
-        //         border: 1px solid var(--primary-color);
-        //         text-overflow: ellipsis;
-        //         padding: 10px 20px;
-        //         font-weight: 400;
-        //         font-size: 12px !important;
-        //         border-radius: 20px;
-        //     }
-        // }
         .action-btn {
             font-weight: 400;
             font-size: 12px;

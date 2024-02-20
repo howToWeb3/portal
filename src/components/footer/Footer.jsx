@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Footer(props) {
-    const [
-        dataBlock,
-    ] = useState({
-        heading: 'Get Newsletter',
-        desc: 'Get udpated with news, tips & tricks',
-    });
+    // const [
+    //     dataBlock,
+    // ] = useState({
+    //     heading: 'Get Newsletter',
+    //     desc: 'Get udpated with news, tips & tricks',
+    // });
 
     const [
         isVisible,
@@ -40,8 +40,8 @@ function Footer(props) {
         <footer className="footer">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-12">
-                        <div className="footer__main">
+                    <div className="col-md-12 bg-black text-white">
+                        {/* <div className="footer__main">
                             <div className="block-text center">
                                 <h3 className="heading">{dataBlock.heading}</h3>
                                 <p>{dataBlock.desc}</p>
@@ -61,7 +61,7 @@ function Footer(props) {
                                     <span>Subscribe</span>
                                 </button>
                             </form>
-                        </div>
+                        </div> */}
 
                         <div className="footer__bottom">
                             <Link
@@ -77,22 +77,52 @@ function Footer(props) {
                             <div className="center mb--30">
                                 <ul className="list">
                                     <li>
-                                        <Link to="/">Home</Link>
+                                        <Link
+                                            to="/"
+                                            className="text-white"
+                                        >
+                                            Home
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link to="/nfts">Explore</Link>
+                                        <Link
+                                            to="/nfts"
+                                            className="text-white"
+                                        >
+                                            Explore
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link to="/about">About</Link>
+                                        <Link
+                                            to="/about"
+                                            className="text-white"
+                                        >
+                                            About
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link to="/nfts">Collections</Link>
+                                        <Link
+                                            to="/nfts"
+                                            className="text-white"
+                                        >
+                                            Collections
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link to="/team">Team</Link>
+                                        <Link
+                                            to="/team"
+                                            className="text-white"
+                                        >
+                                            Team
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link to="/contact">Contact</Link>
+                                        <Link
+                                            to="/contact"
+                                            className="text-white"
+                                        >
+                                            Contact
+                                        </Link>
                                     </li>
                                 </ul>
                                 <p>Copyright © 2022, Cyfonii. Designed by Themesflat</p>

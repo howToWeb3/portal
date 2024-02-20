@@ -489,6 +489,18 @@ h6,
     }
 }
 
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    max-width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 .mouse-cursor {
     position: fixed;
     left: 0;

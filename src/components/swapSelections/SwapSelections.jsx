@@ -20,7 +20,7 @@ export default function SwapSelections({
     };
 
     return (
-        <div className="d-flex flex-column col-12 col-md-6">
+        <div className="d-flex flex-column col-12 col-md-6 pb-5">
             <div className="d-flex align-items-center justify-content-between pb-4 p-2">
                 <h5 className="title">
                     {toTokenSelection?.ticker && fromTokenSelection?.ticker
@@ -80,7 +80,6 @@ export default function SwapSelections({
                             value={toTokenInput}
                         />
                     </div>
-
                     <Button
                         className="w-100 selection-btn"
                         variant="light"

@@ -42,26 +42,28 @@ export default function SwapConfirm({
 
         try {
             if (isValid) {
+                const xrplPayload = {
+                    TransactionType: 'OfferCreate',
+                    Account: contextState.address,
+                    TakerGets: {
+                        currency: fromTokenSelection.currency,
+                        issuer: fromTokenSelection.account,
+                        value: parseFloat(fromTokenInput),
+                    },
+                    TakerPays: {
+                        currency: toTokenSelection.currency,
+                        issuer: toTokenSelection.account,
+                        value: parseFloat(toTokenInput),
+                    },
+                    // Flags: OfferCreateFlags.tfFillOrKill,
+                };
+
                 const payload = {
                     method: 'POST',
                     url: 'xaman/qr-generate',
                     encrypt: false,
                     auth: false,
-                    data: {
-                        TransactionType: 'OfferCreate',
-                        Account: contextState.address,
-                        TakerGets: {
-                            currency: fromTokenSelection.currency,
-                            issuer: fromTokenSelection.account,
-                            value: parseFloat(fromTokenInput),
-                        },
-                        TakerPays: {
-                            currency: toTokenSelection.currency,
-                            issuer: toTokenSelection.account,
-                            value: parseFloat(toTokenInput),
-                        },
-                        Flags: OfferCreateFlags.tfFillOrKill,
-                    },
+                    data: xrplPayload,
                 };
 
                 if (fromTokenSelection.currency === 'XRP') {

@@ -3,22 +3,28 @@
 .block-text {
     .sub-heading {
         padding: 7px 14px;
-        background: linear-gradient(264.28deg, black -38.2%, var(--primary-color) 103.12%), #ffffff;
+        background: black;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         border: 1px solid rgba(92, 92, 92, 0.3607843137);
         backdrop-filter: blur(4px);
         border-radius: 100px;
+        font-weight: 300;
         display: inline-block;
+        margin-bottom: 22px;
 
+        &.white {
+            background: var(--company-white);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border: 1px solid rgb(255 255 255 / 36%);
+        }
 
         span {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
-        margin-bottom: 22px;
     }
 
     .heading {
