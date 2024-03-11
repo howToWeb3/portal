@@ -65,6 +65,7 @@
         // border-left: none;
         border-radius: 0px 10px 10px 0;
         background: var(--company-white);
+        font-size: 16px;
 
         @include mobile {
             border-radius: 10px;
@@ -77,6 +78,7 @@
         border: 1px solid black;
         border-right: none;
         color: black;
+        font-size: 16px;
 
         &::placeholder {
             color: black;

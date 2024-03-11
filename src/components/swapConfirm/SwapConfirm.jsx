@@ -47,12 +47,12 @@ export default function SwapConfirm({
                     Account: contextState.address,
                     TakerGets: {
                         currency: fromTokenSelection.currency,
-                        issuer: fromTokenSelection.account,
+                        issuer: fromTokenSelection.issuer,
                         value: parseFloat(fromTokenInput),
                     },
                     TakerPays: {
                         currency: toTokenSelection.currency,
-                        issuer: toTokenSelection.account,
+                        issuer: toTokenSelection.issuer,
                         value: parseFloat(toTokenInput),
                     },
                     // Flags: OfferCreateFlags.tfFillOrKill,

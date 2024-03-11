@@ -8,7 +8,7 @@ import { calculatePrice } from 'utils/swap-tokens.utils';
 import useMergedState from 'utils/useMergedState';
 import { Client } from 'xrpl';
 
-export default function SwapTokens({ lines }) {
+export default function SwapTokens() {
     const [
         reverseTokenValues,
         setReverseTokenValues,
@@ -37,18 +37,6 @@ export default function SwapTokens({ lines }) {
     ] = useState(false);
 
     const [
-        userTrustlines,
-        setUserTrustlines,
-    ] = useState([
-        {
-            ticker: 'XRP',
-            currency: 'XRP',
-            issuer: null,
-        },
-        ...lines,
-    ]);
-
-    const [
         type,
         setType,
     ] = useState('');
@@ -63,20 +51,44 @@ export default function SwapTokens({ lines }) {
         setErrors,
     ] = useMergedState({ fromToken: '', toToken: '' });
 
+    useEffect(() => {
+        if (fromTokenSelection.currency && toTokenSelection.currency) {
+            fetchPrice(fromTokenSelection, toTokenSelection);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [
+        fromTokenSelection,
+        toTokenSelection,
+    ]);
+
+    const resetAllValues = useCallback(() => {
+        setFromTokenInput('');
+        setToTokenInput('');
+        setFromTokenSelection({});
+        setPrice(0);
+        setToTokenSelection({});
+        setErrors({ fromToken: '', toToken: '' });
+        setReverseTokenValues(!reverseTokenValues);
+    }, [
+        setErrors,
+        reverseTokenValues,
+    ]);
+
     const fetchPrice = useCallback(
         async (t1, t2) => {
             try {
                 if (!(t1.currency || t1.issuer || t2.currency || t2.issuer)) return;
 
                 if (t1.currency === t2.currency) {
-                    enqueueSnackbar('Please select a different token', { variant: 'warning' });
+                    enqueueSnackbar('Token values cannot be the same', { variant: 'warning' });
+                    resetAllValues();
                     return;
                 }
 
                 let currency1 =
-                    t1.currency === 'XRP' ? { currency: 'XRP' } : { currency: t1.currency, issuer: t1.account };
+                    t1.currency === 'XRP' ? { currency: 'XRP' } : { currency: t1.currency, issuer: t1.issuer };
                 let currency2 =
-                    t2.currency === 'XRP' ? { currency: 'XRP' } : { currency: t2.currency, issuer: t2.account };
+                    t2.currency === 'XRP' ? { currency: 'XRP' } : { currency: t2.currency, issuer: t2.issuer };
 
                 const client = new Client(import.meta.env.VITE_XRPL_WS_URL);
                 await client.connect();
@@ -101,28 +113,9 @@ export default function SwapTokens({ lines }) {
             fromTokenInput,
             setToTokenInput,
             reverseTokenValues,
+            resetAllValues,
         ],
     );
-
-    useEffect(() => {
-        if (fromTokenSelection.currency && toTokenSelection.currency) {
-            fetchPrice(fromTokenSelection, toTokenSelection);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [
-        fromTokenSelection,
-        toTokenSelection,
-    ]);
-
-    const resetAllValues = () => {
-        setFromTokenInput('');
-        setToTokenInput('');
-        setFromTokenSelection({});
-        setPrice(0);
-        setToTokenSelection({});
-        setErrors({ fromToken: '', toToken: '' });
-        setReverseTokenValues(!reverseTokenValues);
-    };
 
     const handleReverseTokenValues = () => {
         setReverseTokenValues(true);
@@ -175,7 +168,6 @@ export default function SwapTokens({ lines }) {
                 {...{
                     showModal,
                     handleClick: handleSelectionClick,
-                    userTrustlines,
                     onModalClose,
                 }}
             />

@@ -1,6 +1,8 @@
 export const LINKS = {
     TWITTER: 'https://twitter.com/MMoonboi589',
     CDN: 'https://cdn.jsdelivr.net/gh/moonboi589/assets',
+    XRPL_META: 'https://s1.xrplmeta.org',
+    XRP_ICON: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png',
 };
 
 export const PATHS = {

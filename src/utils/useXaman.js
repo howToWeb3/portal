@@ -14,6 +14,7 @@ export default function useXaman() {
 
             let decodedToken = jwtDecode(token);
             let currentDate = new Date();
+
             // JWT expires in 1 day
             if (decodedToken.exp * 1000 < currentDate.getTime()) {
                 enqueueSnackbar('Please login to continue', { variant: 'info' });

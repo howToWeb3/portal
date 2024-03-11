@@ -1,8 +1,12 @@
+import { LINKS } from 'constants/common';
+import { enqueueSnackbar } from 'notistack';
 import { useEffect, useState } from 'react';
-import { Modal } from 'react-bootstrap';
+import { Image, Modal } from 'react-bootstrap';
+import { ApiCall } from 'utils/api';
+import useDebounce from 'utils/useDebounce';
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
-export default function SwapSelectionModal({ showModal, handleClick, userTrustlines, onModalClose }) {
+export default function SwapSelectionModal({ showModal, handleClick, onModalClose }) {
     const [
         searchValue,
         setSearchValue,
@@ -13,21 +17,49 @@ export default function SwapSelectionModal({ showModal, handleClick, userTrustli
         setTokens,
     ] = useState([]);
 
+    const debouncedSearchValue = useDebounce(searchValue, 500);
+
+    useEffect(() => {
+        fetchTokens(debouncedSearchValue);
+    }, [
+        debouncedSearchValue,
+    ]);
+
+    const fetchTokens = async name => {
+        try {
+            const res = await ApiCall({
+                url: '/xrpl/tokens',
+                method: 'GET',
+                params: {
+                    name,
+                },
+            });
+
+            setTokens([
+                {
+                    ticker: 'XRP',
+                    currency: 'XRP',
+                    issuer: null,
+                    icon: LINKS.XRP_ICON,
+                },
+                ...res.data,
+            ]);
+        } catch (error) {
+            console.error(error);
+            enqueueSnackbar('Error fetching tokens', { variant: 'error' });
+        }
+    };
+
     useEffect(() => {
         if (showModal) {
-            setTokens(userTrustlines);
             setSearchValue('');
         }
     }, [
         showModal,
-        userTrustlines,
     ]);
 
     const onSearchChange = value => {
         setSearchValue(value);
-        // filter the list of tokens
-        const filteredTokens = userTrustlines.filter(token => token.ticker.toLowerCase().includes(value.toLowerCase()));
-        setTokens(filteredTokens);
     };
 
     const onClose = () => {
@@ -58,6 +90,11 @@ export default function SwapSelectionModal({ showModal, handleClick, userTrustli
                                         onClick={() => handleClick(trustline)}
                                         className="dropdown-item p-2"
                                     >
+                                        <Image
+                                            src={trustline.icon}
+                                            width="20"
+                                            className="me-2"
+                                        />
                                         {trustline.ticker}
                                     </a>
                                 </li>

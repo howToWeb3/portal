@@ -10,7 +10,7 @@ import { TrustlinesCard } from '../components/trustlinesCard/TrustlinesCard';
 import { numberWithCommas, renderValue } from '../utils/common.utils';
 import SwapTokens from './SwapTokens';
 
-function AccountDetails(props) {
+function AccountDetails() {
     const { state: contextState } = useAppContext();
     const { address } = contextState;
     const [
@@ -54,15 +54,29 @@ function AccountDetails(props) {
     const calculateAccountAge = useCallback(inception => {
         const inceptionDate = new Date(inception);
         const today = new Date();
-        // difference in year and month
-        const diffYear = today.getFullYear() - inceptionDate.getFullYear();
-        const diffMonth = (12 - inceptionDate.getMonth() + today.getMonth()) % 12;
-        const diffDay = today.getDate() - inceptionDate.getDate();
+        const diffMilliseconds = today - inceptionDate;
 
-        if (diffYear === 0) return `${diffMonth} months`;
-        if (diffMonth === 0) return `${diffDay} days`;
+        // Calculate different units from milliseconds
+        const diffYears = Math.floor(diffMilliseconds / (1000 * 60 * 60 * 24 * 365.25));
+        const diffMonths = Math.floor(
+            (diffMilliseconds % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44),
+        );
+        const diffDays = Math.floor((diffMilliseconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60 * 24));
 
-        return `${diffYear} years`;
+        // Construct the output string
+        const years = diffYears > 0 ? `${diffYears} year${diffYears > 1 ? 's' : ''}` : '';
+        const months = diffMonths > 0 ? `${diffMonths} month${diffMonths > 1 ? 's' : ''}` : '';
+        const days = diffDays > 0 ? `${diffDays} day${diffDays > 1 ? 's' : ''}` : '';
+
+        const output = [
+            years,
+            months,
+            days,
+        ]
+            .filter(Boolean)
+            .join(' ');
+
+        return output || '0 days';
     }, []);
 
     const handleLearnMoreClick = useCallback(() => {
@@ -89,8 +103,7 @@ function AccountDetails(props) {
             </div>
             <div
                 className="d-flex mt-3 bg-black"
-                data-aos="fade-up"
-                data-aos-duration="1000"
+                data-aos="fade-down"
             >
                 <div className="container text-center">
                     {accountDetails && (
@@ -101,7 +114,10 @@ function AccountDetails(props) {
                             </div>
 
                             <div className="col-6">
-                                <div className="hashicon-bg">
+                                <div
+                                    className="hashicon-bg"
+                                    data-aos="flip-up"
+                                >
                                     <Hashicon
                                         value={address}
                                         size={300}
@@ -148,7 +164,7 @@ function AccountDetails(props) {
                     <TrustlinesCard lines={accountDetails?.lines || []} />
                 </div>
             </div>
-            {accountDetails?.lines && <SwapTokens lines={accountDetails?.lines} />}
+            {accountDetails?.lines && <SwapTokens />}
         </div>
     );
 }

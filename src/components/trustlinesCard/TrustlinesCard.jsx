@@ -10,6 +10,8 @@ export function TrustlinesCard({ lines }) {
     const COLORS = Array.from({ length: data.length }, (_, index) => `hsl(${(index * 360) / data.length}, 70%, 50%)`);
 
     const totalBalance = data.reduce((acc, curr) => acc + curr.value, 0);
+    const isAllZero = data.every(entry => entry.value === 0);
+
     const RADIAN = Math.PI / 180;
 
     const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
@@ -90,27 +92,39 @@ export function TrustlinesCard({ lines }) {
                         width={400}
                         height={400}
                     >
-                        <PieChart>
-                            <Pie
-                                data={data}
-                                cx="50%"
-                                cy="50%"
-                                outerRadius={180}
-                                labelLine={false}
-                                fill="#8884d8"
-                                label={renderCustomizedLabel}
-                                dataKey="value"
+                        {isAllZero ? (
+                            <div
+                                className="d-flex justify-content-center align-items-center"
+                                style={{ height: '100%' }}
                             >
-                                {data.map((entry, index) => (
-                                    <Cell
-                                        key={`cell-${index}`}
-                                        fill={COLORS[index % COLORS.length]}
-                                        style={{ outline: 'none' }}
-                                    />
-                                ))}
-                            </Pie>
-                            <Tooltip content={<CustomTooltip />} />
-                        </PieChart>
+                                <div className="text-center">
+                                    <div className="heading">No Balance</div>
+                                    <div className="sub-heading">Add more token balance to see the visualisation</div>
+                                </div>
+                            </div>
+                        ) : (
+                            <PieChart>
+                                <Pie
+                                    data={data}
+                                    cx="50%"
+                                    cy="50%"
+                                    outerRadius={180}
+                                    labelLine={false}
+                                    fill="#8884d8"
+                                    label={renderCustomizedLabel}
+                                    dataKey="value"
+                                >
+                                    {data.map((entry, index) => (
+                                        <Cell
+                                            key={`cell-${index}`}
+                                            fill={COLORS[index % COLORS.length]}
+                                            style={{ outline: 'none' }}
+                                        />
+                                    ))}
+                                </Pie>
+                                <Tooltip content={<CustomTooltip />} />
+                            </PieChart>
+                        )}
                     </ResponsiveContainer>
                 </div>
             </div>
