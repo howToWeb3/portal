@@ -12,7 +12,7 @@ export const useAppContext = () => {
 };
 
 export const AppProvider = ({ children }) => {
-    const token = getDataFromLocalStrg('mb589_token');
+    const token = getDataFromLocalStrg('how_to_web3_token');
     const { autoLogin } = useXaman();
     const navigate = useNavigate();
     const [

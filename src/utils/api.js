@@ -17,7 +17,7 @@ export const ApiCall = payload => {
     const _axios = axios.create();
 
     if (payload.auth) {
-        const jwToken = getDataFromLocalStrg('mb589_token', import.meta.VITE_ENCRYPTION_KEY);
+        const jwToken = getDataFromLocalStrg('how_to_web3_token', import.meta.VITE_ENCRYPTION_KEY);
         if (payload.method.toLowerCase() === 'get') {
             payload.params = {
                 ...payload.params,
@@ -67,7 +67,7 @@ export const ApiCall = payload => {
                 // JWT Token Invalid or Expired Case
                 if (data.message === 'JWT validation failed') {
                     enqueueSnackbar('Please login to continue', { variant: 'info' });
-                    localStorage.removeItem('mb589_token');
+                    localStorage.removeItem('how_to_web3_token');
                     window.location.href = window.location.origin;
                 }
 
