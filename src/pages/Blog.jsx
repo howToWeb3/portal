@@ -16,7 +16,6 @@ function Blog() {
 
     const getBlogList = async () => {
         const data = await fetch(`${LINKS.CDN}/locales/en/blogs.json`).then(res => res.json());
-        console.log(data);
         setData(data);
     };
 

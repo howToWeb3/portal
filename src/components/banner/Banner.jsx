@@ -108,7 +108,7 @@ function Banner() {
                                 <div className="owner">
                                     <div className="image">
                                         <img
-                                            src={logo}
+                                            src={LINKS.CDN + cdnData.owner.logo}
                                             alt="owner"
                                         />
                                     </div>

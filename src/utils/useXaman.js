@@ -79,6 +79,7 @@ export default function useXaman() {
                     setContextState({ address: '' });
                     ws.close();
                     resolve({ success: false, message: 'Login request cancelled. Please try again' });
+                    return;
                 } else if (json.payload_uuidv4) {
                     const payload = {
                         method: 'GET',
@@ -93,6 +94,7 @@ export default function useXaman() {
                         ws.close();
                         setContextState({ address: '' });
                         resolve({ success: false, message: 'Please try again using XUMM' });
+                        return;
                     }
                     if (validateUuidResponse.token) {
                         setContextState({
@@ -103,6 +105,7 @@ export default function useXaman() {
                         enqueueSnackbar('Success!', { variant: 'success' });
                         ws.close();
                         resolve({ success: true });
+                        return;
                     }
                 } else if (json.opened && !isOpened) {
                     isOpened = true;
@@ -114,12 +117,14 @@ export default function useXaman() {
             ws.onerror = function (error) {
                 setContextState({ address: '' });
                 resolve({ success: false, message: 'Connection error: ' + error });
+                return;
             };
 
             ws.onclose = function () {
                 if (!isOpened) {
                     setContextState({ address: '' });
                     resolve({ success: false, message: 'Connection closed unexpectedly' });
+                    return;
                 }
             };
         });

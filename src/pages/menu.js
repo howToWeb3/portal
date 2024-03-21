@@ -75,8 +75,8 @@ const menus = [
     // },
     {
         id: 4,
-        name: 'About',
-        links: '/about',
+        name: 'NFTs',
+        links: '/nfts',
     },
     {
         id: 5,
@@ -87,6 +87,11 @@ const menus = [
         id: 6,
         name: 'Team',
         links: '/team',
+    },
+    {
+        id: 4,
+        name: 'About',
+        links: '/about',
     },
     {
         id: 7,

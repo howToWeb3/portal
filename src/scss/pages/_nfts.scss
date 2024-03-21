@@ -1,0 +1,123 @@
+.page-nfts {
+    padding-top: 50px;
+    background: white;
+    color: black;
+
+    .search {
+        padding: 80px 0 0 0;
+
+        .container {
+            .search-container {
+                .search-input {
+                    padding: 10px 20px;
+                    width: 50%;
+                    outline: 0;
+                    border-radius: 20px;
+                    border: 1px solid black;
+                    font-size: 16px;
+                }
+            }
+
+        }
+    }
+
+    .container {
+        &.head {
+            background: var(--company-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .head-container {
+            position: relative;
+            width: 980px;
+            padding: 20px 0 10px;
+            min-height: 248px;
+
+            .title {
+                font-size: 48px;
+                font-weight: 600;
+                letter-spacing: -.003em;
+                line-height: 1.0834933333;
+                max-width: 640px;
+                padding: 80px 0 64px;
+
+                .title-text {
+                    color: black;
+                    font-size: 60px;
+                }
+
+                .sub-title-text {
+                    color: gray;
+                }
+            }
+        }
+
+        .header-bg-image {
+            position: absolute;
+            top: 143px;
+            filter: blur(10px);
+            right: 0px;
+            width: 776px;
+            transform: rotate(25deg);
+            z-index: 0;
+
+            &.mints {
+                z-index: 0;
+                transform: scale(1);
+                filter: blur(2px);
+            }
+        }
+
+        .divisions-container {
+            position: relative;
+            width: 980px;
+            padding: 20px 0 10px;
+            min-height: 148px;
+
+            .title {
+                font-size: 48px;
+                font-weight: 600;
+                letter-spacing: -.003em;
+                line-height: 1.0834933333;
+                max-width: 640px;
+                padding: 10px 0 64px;
+
+                .title-text {
+                    color: black;
+                    font-size: 56px;
+                    line-height: 1.0714285714;
+                    font-weight: 600;
+                    letter-spacing: -0.005em;
+                }
+
+                .sub-title-text {
+                    color: gray;
+                }
+            }
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            border: 2px solid #ccc;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .dot.active {
+            background-color: #333;
+            border-color: #333;
+        }
+    }
+
+}

@@ -1,5 +1,8 @@
-import React, { createContext, useContext, useState } from 'react';
+import { PATHS } from 'constants/common';
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { getDataFromLocalStrg } from 'utils/common.utils';
+import useXaman from 'utils/useXaman';
 
 const AppContext = createContext();
 
@@ -10,13 +13,32 @@ export const useAppContext = () => {
 
 export const AppProvider = ({ children }) => {
     const token = getDataFromLocalStrg('mb589_token');
-
+    const { autoLogin } = useXaman();
+    const navigate = useNavigate();
     const [
         state,
         setState,
     ] = useState({
         address: token?.address ?? '',
     });
+
+    useEffect(() => {
+        async function login() {
+            try {
+                const isAutoLoginAllowed = await autoLogin();
+
+                if (!isAutoLoginAllowed) {
+                    navigate(PATHS.HOME);
+                    setState({
+                        ...state,
+                        address: '',
+                    });
+                }
+            } catch (err) {}
+        }
+        login();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <AppContext.Provider

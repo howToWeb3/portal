@@ -1,5 +1,6 @@
-import logo from 'assets/images/logo/logo-footer.png';
+import { LINKS } from 'constants/common';
 import React from 'react';
+import { Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function Footer2(props) {
@@ -14,9 +15,10 @@ function Footer2(props) {
                                     to="/"
                                     className="logo"
                                 >
-                                    <img
-                                        src={logo}
-                                        alt="Cyfonii"
+                                    <Image
+                                        src={`${LINKS.CDN}/images/png/logo/HWT3_logo_baseflat.png`}
+                                        alt="logo"
+                                        width={300}
                                     />
                                 </Link>
                                 <ul className="list-social">

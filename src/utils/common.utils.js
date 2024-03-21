@@ -26,13 +26,17 @@ export const saveInLocalStrg = (key, data) => {
 };
 
 export const getDataFromLocalStrg = key => {
-    let data = localStorage.getItem(key);
-    if (!data) {
+    try {
+        let data = localStorage.getItem(key);
+        if (!data) {
+            return null;
+        }
+
+        data = decryptJSON(data);
+        return data;
+    } catch (err) {
         return null;
     }
-
-    data = decryptJSON(data);
-    return data;
 };
 
 export const numberWithCommas = x => {
