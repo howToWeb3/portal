@@ -9,6 +9,7 @@ import HelpCenter from './HelpCenter';
 import Home01 from './Home01';
 import Home02 from './Home02';
 import Home03 from './Home03';
+import NftDetails from './NftDetails';
 import Nfts from './Nfts';
 import ParticipantAssets from './ParticipantAssets';
 import Partners from './Partners';
@@ -33,6 +34,7 @@ const routes = [
     { path: PATHS.TEAM, component: <Team /> },
     { path: PATHS.CONTACT, component: <Contact /> },
     { path: PATHS.ACCOUNT_DETAILS, component: <AccountDetails /> },
+    { path: PATHS.NFT_DETAILS, component: <NftDetails /> },
 ];
 
 export default routes;

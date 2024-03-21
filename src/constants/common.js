@@ -1,6 +1,6 @@
 export const LINKS = {
     TWITTER: 'https://twitter.com/HowToWeb3',
-    CDN: 'https://cdn.jsdelivr.net/gh/howToWeb3/assets',
+    CDN: 'https://cdn.jsdelivr.net/gh/howtoweb3/assets@latest',
     XRPL_META: 'https://s1.xrplmeta.org',
     XRP_ICON: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png',
 };
@@ -23,6 +23,7 @@ export const PATHS = {
     CONTACT: '/contact',
     ACCOUNT_DETAILS: '/account-details',
     SWAP_TOKEN: '/swap',
+    NFT_DETAILS: '/nft-details',
 };
 
 export const REGEX = {
