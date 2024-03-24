@@ -40,7 +40,6 @@
         "react-bootstrap-accordion": "^1.0.0",
         "react-chartjs-2": "^4.3.1",
         "react-dom": "^18.0.0",
-        "react-ipfs-image": "^0.7.1",
         "react-router-dom": "^6.3.0",
         "react-scripts": "5.0.0",
         "react-tabs": "^5.1.0",
@@ -69,6 +68,7 @@
         "prettier-plugin-pkg": "^0.18.1",
         "prettier-plugin-sh": "^0.14.0",
         "react-i18next": "^14.0.1",
+        "react-lazyload": "^3.2.0",
         "vite": "^5.0.12"
     },
     "browserslist": {

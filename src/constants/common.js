@@ -23,6 +23,7 @@ export const PATHS = {
     CONTACT: '/contact',
     ACCOUNT_DETAILS: '/account-details',
     SWAP_TOKEN: '/swap',
+    COLLECTION_DETAILS: '/collection-details',
     NFT_DETAILS: '/nft-details',
 };
 
@@ -35,4 +36,10 @@ export const XAMAN_INITIAL_STATE = {
     loading: false,
     openModal: false,
     img: '',
+};
+
+export const FILE_TYPE = {
+    IMAGE: 'image',
+    VIDEO: 'video',
+    JSON: 'application/json',
 };

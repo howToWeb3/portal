@@ -1,21 +1,31 @@
 import NftCard from 'components/nftCard/NftCard';
-import React, { useState } from 'react';
+import React from 'react';
+import { Button } from 'react-bootstrap';
 
-export default function NftCardsRow({ cardsPerRow, data, slideDirection }) {
-    const [
-        currentDot,
-        setCurrentDot,
-    ] = useState(0);
-    const totalDots = Math.ceil(data.length / cardsPerRow);
+export default function NftCardsRow({ nfts, slideDirection, redirectionUrl, handleLoadClick, showButton }) {
+    // const renderDots = useCallback(() => {
+    //     const dots = [];
 
-    const handleDotClick = index => {
-        setCurrentDot(index);
-    };
+    //     for (let i = 1; i <= totalPages; i++) {
+    //         dots.push(
+    //             <span
+    //                 key={i}
+    //                 className={`dot ${page === i ? 'active' : ''}`}
+    //                 onClick={handleLoadClick}
+    //             />,
+    //         );
+    //     }
+    //     return dots;
+    // }, [
+    //     page,
+    //     totalPages,
+    //     handleLoadClick,
+    // ]);
 
-    if (!data.length) {
+    if (!nfts?.length) {
         return (
             <div className="d-flex flex-column align-items-center">
-                <div className="h1 text-muted fw-normal">Sorry no data found. Try again later.</div>
+                <div className="h1 text-muted fw-normal">Sorry no NFTs found. Please try again later.</div>
             </div>
         );
     }
@@ -23,22 +33,25 @@ export default function NftCardsRow({ cardsPerRow, data, slideDirection }) {
     return (
         <>
             <div className="row z-1 position-relative">
-                {data.slice(currentDot * cardsPerRow, currentDot * cardsPerRow + cardsPerRow).map((d, index) => (
+                {nfts.map((d, index) => (
                     <NftCard
                         key={d.id}
                         data={d}
                         slideDirection={slideDirection}
+                        redirectionUrl={redirectionUrl}
                     />
                 ))}
             </div>
             <div className="carousel-dots">
-                {Array.from({ length: totalDots }, (_, index) => (
-                    <span
-                        key={index}
-                        className={`dot ${currentDot === index ? 'active' : ''}`}
-                        onClick={() => handleDotClick(index)}
-                    />
-                ))}
+                {showButton && (
+                    <Button
+                        variant="dark"
+                        onClick={handleLoadClick}
+                        loading={true}
+                    >
+                        Load More
+                    </Button>
+                )}
             </div>
         </>
     );

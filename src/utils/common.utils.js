@@ -72,3 +72,34 @@ export const renderValue = value => {
 
 export const xrplTokenName = value =>
     value?.length === 40 ? convertHexToString(value).replaceAll('\u0000', '') : value;
+
+export const getIPFSUrl = ipfsHash => {
+    if (!ipfsHash) {
+        return '';
+    }
+
+    if (ipfsHash.startsWith('https://ipfs.io/ipfs/')) {
+        return ipfsHash;
+    }
+
+    if (ipfsHash.startsWith('http://') || ipfsHash.startsWith('https://')) {
+        // If the input is already a valid URL, return it as is
+        return ipfsHash;
+    }
+
+    // Check if the input starts with "ipfs://"
+    if (ipfsHash.startsWith('ipfs://ipfs/')) {
+        // get everything after "ipfs://ipfs" there can be more things before ipfs://
+        const hash = ipfsHash.split('ipfs://ipfs/')[1];
+        console.log(hash, ipfsHash);
+        ipfsHash = hash;
+    } else if (ipfsHash.startsWith('ipfs://')) {
+        // get everything after "ipfs://"
+        const hash = ipfsHash.split('ipfs://')[1];
+        ipfsHash = hash;
+    }
+
+    // Construct the URL using the ipfs.io gateway
+    const url = `https://ipfs.io/ipfs/${ipfsHash}`;
+    return url;
+};
