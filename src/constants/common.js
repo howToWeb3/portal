@@ -43,3 +43,10 @@ export const FILE_TYPE = {
     VIDEO: 'video',
     JSON: 'application/json',
 };
+
+export const XAMAN_SCAN_INSTRUCTIONS = [
+    'Open Xaman Wallet',
+    'Click the middle icon at the bottom',
+    'Scan the QR code',
+    'Approve the Sign In transaction',
+];

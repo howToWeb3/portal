@@ -40,11 +40,18 @@ export const AppProvider = ({ children }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    const resetState = () => {
+        setState({
+            address: '',
+        });
+    };
+
     return (
         <AppContext.Provider
             value={{
                 state,
                 setState,
+                resetState,
             }}
         >
             {children}

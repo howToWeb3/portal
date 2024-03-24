@@ -11,7 +11,7 @@ import { numberWithCommas, renderValue } from '../utils/common.utils';
 import SwapTokens from './SwapTokens';
 
 function AccountDetails() {
-    const { state: contextState } = useAppContext();
+    const { state: contextState, resetState: resetContextState } = useAppContext();
     const { address } = contextState;
     const [
         loading,
@@ -85,6 +85,15 @@ function AccountDetails() {
         address,
     ]);
 
+    const handleSignOut = useCallback(() => {
+        resetContextState();
+        localStorage.removeItem('how_to_web3_token');
+        navigate(PATHS.HOME);
+    }, [
+        navigate,
+        resetContextState,
+    ]);
+
     return (
         <div className="page-account wrapper">
             {loading && <Loader />}
@@ -94,7 +103,12 @@ function AccountDetails() {
                         <div className="head-container d-flex justify-content-between align-items-center">
                             <h4 className="title">Account</h4>
                             <div className="btn-group">
-                                <button className="btn btn-link">Sign Out</button>
+                                <button
+                                    className="btn btn-link"
+                                    onClick={handleSignOut}
+                                >
+                                    Sign Out
+                                </button>
                             </div>
                         </div>
                         <div className="custom-greetings">Hello, {address}</div>
