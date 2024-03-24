@@ -1,4 +1,4 @@
-.nft-details-page {
+.page-account {
     padding-top: 50px;
     background: white;
     color: black;
@@ -42,77 +42,105 @@
         }
     }
 
-    .nft-details {
-        width: calc(100% - 40px);
-        padding: 20px;
-        margin: 20px auto;
-        background-color: #f0f0f0;
-        position: relative;
-        overflow: hidden;
 
-        .acc-details {
-            padding: 50px 20px 40px 0;
-            height: 540px;
-            margin: 1% 15%;
+    .acc-details {
+        padding: 50px 20px 40px 0;
+        height: 540px;
+        margin: 1% 15%;
 
-            .hashicon-bg {
-                width: 100%;
-                height: 100%;
+        .hashicon-bg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .heading {
+            font-size: 35px;
+            margin-bottom: 5px;
+            font-weight: 400;
+            letter-spacing: 0.004em;
+            line-height: 1.125;
+        }
+
+        .sub-heading {
+            font-size: 16px;
+            font-weight: 200;
+            margin-bottom: 40px;
+        }
+
+        .account-info__item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            .account-info__label {
+                font-size: 28px;
+                font-weight: 400;
+                letter-spacing: 0.004em;
+                color: var(--company-white);
             }
 
-            .heading {
+            .account-info__value {
+                font-size: 22px;
+                font-weight: 200;
+                letter-spacing: 0.004em;
+                color: var(--company-white);
+            }
+        }
+    }
+
+    .trustlines-container {
+        padding: 0;
+        height: 500px;
+        margin: 1% 15%;
+
+        .heading {
+            font-size: 35px;
+            margin-bottom: 5px;
+            font-weight: 400;
+            letter-spacing: 0.004em;
+            line-height: 1.125;
+        }
+
+        .sub-heading {
+            font-size: 16px;
+            font-weight: 200;
+            margin-bottom: 40px;
+        }
+
+        .asset-container {
+            max-height: 500px;
+            height: 500px;
+            overflow: hidden;
+            padding: 40px;
+            background: var(--company-white);
+
+            .asset-list {
+                max-height: 310px;
+                overflow: auto;
+            }
+        }
+
+        .piechart-container {
+            padding: 40px;
+
+            .piechart-heading {
                 font-size: 35px;
                 margin-bottom: 5px;
                 font-weight: 400;
                 letter-spacing: 0.004em;
                 line-height: 1.125;
             }
-
-            .sub-heading {
-                font-size: 16px;
-                font-weight: 200;
-                margin-bottom: 40px;
-            }
-
-            .account-info__item {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: 20px;
-
-                .account-info__label {
-                    font-size: 28px;
-                    font-weight: 400;
-                    letter-spacing: 0.004em;
-                    color: var(--company-white);
-                }
-
-                .account-info__value {
-                    font-size: 22px;
-                    font-weight: 200;
-                    letter-spacing: 0.004em;
-                    color: var(--company-white);
-                }
-            }
         }
 
-        .trustlines-container {
-            padding: 0;
-            height: 500px;
-            margin: 1% 15%;
-
-            .asset-container {
-                max-height: 500px;
-                height: 500px;
-                overflow: hidden;
-                padding: 40px;
-                background: var(--company-white);
-
-                .asset-list {
-                    max-height: 310px;
-                    overflow: auto;
-                }
-            }
+        .custom-tooltip {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 12px 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.3s ease-in-out;
         }
     }
+
 }
